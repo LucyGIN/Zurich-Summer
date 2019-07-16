@@ -10,6 +10,42 @@ h1 {
   letter-spacing: 0.545em;
   text-transform: uppercase;
 }
+h2 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  /* identical to box height */
+  letter-spacing: 0.07em;
+}
+h3 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+h4 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+h5 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 14px;
+}
 
 /*NAVIGATION */
 nav {
@@ -36,13 +72,12 @@ ul {
 }
 
 .navlist {
-  box-shadow: inset 100vh 100vw 0 #f8d5a1;
+  box-shadow: inset 100vh 100vw 0 #eb9e9b;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: 1001;
+  z-index: 90;
   position: fixed;
-  top: 80px;
   transition: all 0.3s ease-in-out;
   opacity: 1;
 }
@@ -51,6 +86,10 @@ ul {
   box-shadow: none;
   opacity: 0;
   pointer-events: none;
+}
+
+.hidden li {
+  transition: all 0ms ease !important;
 }
 
 .navbutton {
@@ -77,7 +116,7 @@ li {
   text-align: center;
   align-self: center;
   transform: translateY(90px);
-  opacity: 0;
+  opacity: 1;
 }
 .home {
   opacity: 1;
@@ -89,23 +128,27 @@ li {
 }
 .lounge {
   opacity: 1;
-  transition: all 0.3s 0.6s;
+  transition: all 0.3s 0.5s;
 }
 .food {
   opacity: 1;
-  transition: all 0.3s 0.9s;
+  transition: all 0.3s 0.7s;
 }
 .coffee {
   opacity: 1;
-  transition: all 0.3s 1.1s;
+  transition: all 0.3s 0.9s;
 }
 .events {
   opacity: 1;
-  transition: all 0.3s 1.4s;
+  transition: all 0.3s 1.1s;
 }
 .share {
   opacity: 1;
-  transition: all 0.3s 1.8s;
+  transition: all 0.3s 1.4s;
+}
+.styleGuide {
+  opacity: 1;
+  transition: all 0.3s 1.9s;
 }
 
 .logo {
@@ -122,10 +165,9 @@ li {
   transition: all 0.2s ease-in-out;
 }
 #navA:hover {
-  background-color: #ec652b;
+  background-color: #dd5751;
   padding: 1vw;
   opacity: 0.8;
-  transform: scale(1.5);
 }
 
 @media only screen and (max-width: 1400px) {
