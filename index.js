@@ -14,12 +14,26 @@ button.addEventListener('click', () => {
   //if hamburger show list and make hambuger x
   // button.innerHTML = value === '☰' ? 'x' : '☰';
   // <img class="menuIconX" src="./images/outline-clear-24px.svg" />
-  if (value === './images/outline-menu-24px.svg') {
+  if (value === './icons/outline-menu-24px.svg') {
     // change burger to x
-    menuBtn.src = './images/outline-clear-24px.svg';
+    menuBtn.src = './icons/outline-clear-24px.svg';
   } else {
-    menuBtn.src = './images/outline-menu-24px.svg';
+    menuBtn.src = './icons/outline-menu-24px.svg';
   }
   navlist.classList.toggle('hidden');
   body.classList.toggle('noScroll');
 });
+
+//add javascript here for my small card, will this work?
+//set my variables
+
+//const cardSmall = document.querySelector('.card-photo-sm');
+//const linkBtn = document.querySelector('.linkBtn-SM');
+//const cardLarge = document.querySelector('.card-photo-lg');
+
+//add a click function
+//display New Card
+
+//linkBtn.addEventListener('click', () => {
+//linkBtn.classList.toggle('card-photo-lg');
+//});

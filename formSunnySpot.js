@@ -38,6 +38,8 @@ startQuestionsBtn.addEventListener('click', () => {
 
 function createQuestions(look, index) {
   const questionBox = document.createElement('div');
+  //lucia added for style?
+  questionBox.className = 'simpleForm-container';
 
   const buttonNext = document.createElement('button');
   buttonNext.innerHTML = 'next';
@@ -47,12 +49,20 @@ function createQuestions(look, index) {
   });
 
   const question = document.createElement('h3');
+
   question.innerHTML = look.question;
   questionBox.appendChild(question);
   //create two answer
 
   for (let i = 0; i < look.answer.length; i++) {
-    const answerp = document.createElement('p');
+    const answerp = document.createElement('label');
+    //lucia add style
+    answerp.className = 'simpleForm';
+    //set up variable for input
+    const inputp = document.createElement('input');
+    //append the input to the label
+    answerp.appendChild(inputp);
+
     answerp.innerHTML = look.answer[i];
     //add answers to question box
     questionBox.appendChild(answerp);

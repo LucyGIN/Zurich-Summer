@@ -201,10 +201,18 @@
   margin-left: 20px;
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 .card-photo-lg {
-  margin-right: 10px;
+  margin: 10px;
 }
-.smicon {
-  fill: green;
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.simpleForm-container {
+  margin: 20px;
+  width: 70%;
 }
