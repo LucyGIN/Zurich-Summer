@@ -202,7 +202,17 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 .card-photo-lg {
   margin: 10px;
+}
+.forms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.simpleForm-container {
+  margin: 20px;
+  width: 70%;
 }

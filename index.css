@@ -38,7 +38,10 @@ h5 {
   letter-spacing: 0.145em;
   text-transform: uppercase;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 p {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -295,6 +298,7 @@ li {
   width: 100%;
   height: 100%;
 }
+
 .card-photo-overlay {
   position: absolute;
   top: 10px;
@@ -317,6 +321,68 @@ li {
   top: 50%;
   left: 45%;
   transform: translate(-50%, -50%);
+}
+/* Medium Card dimension */
+.card-photo-md {
+  position: relative;
+  width: 402px;
+  height: 325px;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-md {
+  position: relative;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.captionmd {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-photo-md:hover .card-photo-overlay {
+  opacity: 1;
+}
+
+/* small card dimension */
+.card-photo-sm {
+  position: relative;
+  width: 201px;
+  height: 163px;
+  display: flex;
+  justify-content: center;
+}
+.photo-sm {
+  position: relative;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.overlaysm {
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 90%;
+  width: 90%;
+  opacity: 0;
+  transition: 0.8s ease;
+}
+.captionsm {
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-photo-sm:hover .card-photo-overlay {
+  opacity: 1;
 }
 .captionswim {
   color: #17308f;
@@ -352,6 +418,15 @@ li {
 }
 
 /* first Form */
+/* title of Form*/
+.simpleForm-title {
+  width: 70%;
+  border-bottom: 2px solid black;
+  text-align: center;
+  color: #dd5751;
+  margin: 20px;
+  text-transform: uppercase;
+}
 .simpleForm {
   display: flex;
   align-items: center;
@@ -363,7 +438,7 @@ li {
   height: 40px;
   border: 1px solid #505050;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16 px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -390,12 +465,12 @@ li {
   z-index: -1;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a light pink background color */
 .simpleForm:hover input ~ .checkmark {
   background-color: #f0b5b3;
 }
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a background */
 .simpleForm input:checked ~ .checkmark {
   background-color: #dd5751;
 }
