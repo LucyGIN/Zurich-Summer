@@ -338,6 +338,67 @@ li {
 .captionlounge {
   color: #dd5751;
 }
+.overlayapero {
+  background-color: #f8d5a1;
+}
+.captionapero {
+  color: #ec652b;
+}
+.overlayevent {
+  background-color: #e7e0ef;
+}
+.captionevent {
+  color: #6135ac;
+}
+
+/* first Form */
+.simpleForm {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #505050;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.simpleForm input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #e7e9e9;
+  z-index: -1;
+}
+
+/* On mouse-over, add a grey background color */
+.simpleForm:hover input ~ .checkmark {
+  background-color: #f0b5b3;
+}
+
+/* When the checkbox is checked, add a blue background */
+.simpleForm input:checked ~ .checkmark {
+  background-color: #dd5751;
+}
 
 @media only screen and (max-width: 1400px) {
   h1 {
