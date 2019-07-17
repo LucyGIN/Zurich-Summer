@@ -1,7 +1,10 @@
 body {
   margin: 0;
 }
+
 .video-banner {
+  background: #fcf4d5;
+  background-blend-mode: hard-light;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -14,19 +17,20 @@ video {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
+
+  opacity: 0.8;
 }
 .video-header-text {
   position: absolute;
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
 
-  top: 40%;
-  left: 10%;
+  top: 30%;
+  left: 40%;
 
   z-index: 1;
-  color: white;
-  font-size: 75px;
+  font-size: 4vw;
   text-transform: uppercase;
   text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
 }
@@ -37,42 +41,36 @@ video {
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   white-space: nowrap;
-  width: 1200px;
-  animation: typing 3s steps(23);
+
+  animation: typing 4s steps(23);
   opacity: 0;
-  border-right: 4px solid #d2f4fa;
+  border-right: 3px solid #d2f4fa;
   position: absolute;
   text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
-  top: 0%;
-  left: 100%;
+  top: 70%;
 }
 
 .type1 {
   animation-delay: 1s;
-  animation-duration: 2.7s;
 }
 
 .type2 {
-  animation-delay: 3.8s;
-  animation-duration: 2.7s;
+  animation-delay: 6s;
 }
 
 .type3 {
-  animation-delay: 7.3s;
-  animation-duration: 2.7s;
+  animation-delay: 12s;
 }
 .type4 {
-  animation-delay: 10.8s;
-  animation-duration: 2.7s;
+  animation-delay: 17s;
 }
 .type5 {
-  animation-delay: 14.7s;
-  animation-duration: 2.7s;
+  animation-delay: 20s;
 }
 
 .type6 {
-  animation-delay: 19s;
-  animation-duration: 2.7s;
+  animation-delay: 25s;
+
   animation-fill-mode: forwards;
 }
 
@@ -85,8 +83,8 @@ video {
     width: 0ch;
     opacity: 1;
   }
-  99% {
-    width: 1200px;
+  90% {
+    width: 70vw;
     opacity: 1;
   }
   100% {
@@ -119,26 +117,3 @@ video {
 }
 
 /*this is to fix media sizes*/
-
-@media only screen and (max-width: 1400px) {
-  .video-header-text {
-    left: 4%;
-  }
-  @keyframes typing {
-    0% {
-      width: 0ch;
-      opacity: 0;
-    }
-    1% {
-      width: 0ch;
-      opacity: 1;
-    }
-    99% {
-      width: 840px;
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
