@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
     <title>HOME ZH</title>
   </head>
   <body>
@@ -26,16 +27,227 @@
         </li>
       </ul>
     </div>
-    <nav>
+    <nav class="navigationBar">
       <button class="navbutton">
         <img class="menuIcon" src="./icons/outline-menu-24px.svg" />
       </button>
-      <img class="logo" src="images/smallLogo.svg" width="40px" />
+    
+      <img class="logo" src="images/summerLogo-thick.svg" width="50px" />
     </nav>
-    <section class="banner-header">
-      <div class="banner-photo"></div>
+    <section class="banner-photo-header">
+      <div class="banner-text">
+        <h1>
+          Ginetta’s favorite summer spots
+        </h1>
+      </div>
     </section>
-    <h1>THIS IS THE HOME PAGE</h1>
+    <section class="explore-section">
+      <div class="explore-section-title"><h1>EXPLORE</h1></div>
+      <div class="explore-section-cards">
+        <!--first card-->
+        <div class="card-photo-lg">
+          <img
+            class="photo-lg"
+            id="seeBad-card"
+            src="./images/SeebadEnge.png"
+          />
+          <div class="card-photo-overlay overlayswim">
+            <div class="card-photo-caption captionswim">
+              <div class="card-main-title">
+                <h1>SWIM</h1>
+                <br />
+              </div>
+              <br />
+              <div class="bttm-card">
+                <div class="card-icons">
+                  <img class="smicon" src="icons/near.svg" />
+                  <p>Seebad Enge</p>
+                </div>
+                <div class="card-link">
+                  <button class="linkBtn"> <a href=placeswim.html>explore > </a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--secondcard-->
+        <div class="card-photo-lg">
+          <img
+            class="photo-lg"
+            id="beast-card"
+            src="./images/best_lounge.jpg"
+          />
+          <div class="card-photo-overlay overlaylounge">
+            <div class="card-photo-caption captionlounge">
+              <div class="card-main-title titlelounge">
+                <h1>LOUNGE</h1>
+                <br />
+              </div>
+              <br />
+              <div class="bttm-card">
+                <div class="card-icons">
+                  <img class="smicon" src="icons/near.svg" />
+                  <p>Stadion Brache</p>
+                </div>
+                <div class="card-link">
+                  <button class="linkBtn">Explore ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--third-->
+        <div class="card-photo-lg">
+          <img
+            class="photo-lg"
+            id="samigo-card"
+            src="./images/samigo_apero.jpg"
+          />
+          <div class="card-photo-overlay overlayapero">
+            <div class="card-photo-caption captionapero">
+              <div class="card-main-title">
+                <h1>APERO</h1>
+                <br />
+              </div>
+              <br />
+              <div class="bttm-card">
+                <div class="card-icons">
+                  <img class="smicon" src="icons/near.svg" />
+                  <p>Samigo</p>
+                </div>
+                <div class="card-link">
+                  <button class="linkBtn">Explore></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fourth-->
+        <div class="card-photo-lg">
+          <img
+            class="photo-lg"
+            id="fullmoon-card"
+            src="./images/fullMoon-event.png"
+          />
+          <div class="card-photo-overlay overlayevent">
+            <div class="card-photo-caption captionevent">
+              <div class="card-main-title">
+                <h1>EVENT</h1>
+                <br />
+              </div>
+              <br />
+              <div class="bttm-card">
+                <div class="card-icons">
+                  <img class="smicon" src="icons/near.svg" />
+                  <p>Ginetta</p>
+                </div>
+                <div class="card-link">
+                  <button class="linkBtn">Explore></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="share-section">
+      <div class="explore-section-title"><h1>SHARE</h1></div>
+      <div class="share-section-container">
+        <div class="share-section-text">
+          <h2>
+            Help contribute to the ginetti favorites and submit your favorite
+            spot or event.
+          </h2>
+          <br>
+          <br>
+          <button class="btn1 mainBtn">SHARE</button>
+        </div>
+        <div class="share-section-photos">
+          <!--first photo top left-->
+          <div class="card-top-left">
+              <div class="card-photo-sm">
+                      <img class="photo-sm" src="./images/backi-lounge.jpg">  
+                      <div class="card-photo-overlay overlaysm overlaylounge">
+                      <div class="card-photo-caption captionsm captionlounge"> 
+                      <h4>Bäcki</h4> <br>
+                      
+                      <br>
+                      <div class="card-link">
+                      <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
+                      </div>
+                  </div>    
+                  </div>
+               </div>
+          <!--2nd photo top right-->
+          <div class="card-top-right">
+          <div class="card-photo-sm">
+                <img class="photo-sm" src="./images/LettenRocks_swim.png">  
+                <div class="card-photo-overlay overlaysm overlayswim">
+                <div class="card-photo-caption captionsm captionswim"> 
+                <h4>Letten Spot</h4> <br>
+                
+                <br>
+                <div class="card-link">
+                <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
+                </div>
+            </div>    
+            </div>
+            </div>
+            </div>
+            <!--3RD bottom left-->
+            <div class="card-btm-left">
+            <div class="card-photo-sm">
+                    <img class="photo-sm" src="./images/forkBottle_apero.jpg">  
+                    <div class="card-photo-overlay overlaysm overlayapero">
+                    <div class="card-photo-caption captionsm captionapero"> 
+                    <h4>Fork & Bottle</h4> <br>
+                    
+                    <br>
+                    <div class="card-link">
+                    <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
+                    </div>
+                </div>    
+                </div>
+            </div>
+            </div>
+     <!--replace photo with better event-->
+            <div class="card-btm-right">
+            <div class="card-photo-sm">
+                    <img class="photo-sm" src="./images/Rote Fabrik_apero.png">  
+                    <div class="card-photo-overlay overlaysm overlayevent">
+                    <div class="card-photo-caption captionsm captionevent"> 
+                    <h4>Rote Fabrik Concerts</h4> <br>
+                    
+                    <br>
+                    <div class="card-link">
+                    <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
+                    </div>
+                </div>    
+                </div>
+            </div>
+      
+        </div>
+      </div>
+    </section>
+    <section class="empty">
+        <div class="explore-section-title"><h1></h1></div>
+
+    </section>
+    <section class="map">
+        <div class="explore-section-title"><h1>Search</h1></div>
+        <div class="explore-map">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=18ENTgVgCklp31LEZ8c6rEGJtpU9ZRALU" width="640" height="480"></iframe>
+      </div>
+</section>
+<footer>
+   
+        <div class="footer-links">
+           <button class="linkBtn border footer-link-btn"> <a href="startpage.html">ENTER</a> </button>
+           <button class="linkBtn border footer-link-btn" > <a href="homepage.html">HOME</a> </button>
+           <button class="linkBtn border footer-link-btn"> <a href="homepage.html">SHARE</a>  </button>
+        </div>
+   
+</footer>
   </body>
   <script src="index.js"></script>
 </html>

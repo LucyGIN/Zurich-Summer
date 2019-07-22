@@ -24,6 +24,13 @@ button.addEventListener('click', () => {
   body.classList.toggle('noScroll');
 });
 
+//trying to add nav background
+window.onscroll = () => {
+  const navigationBar = document.querySelector('nav');
+  if (this.scrollY <= 10) navigationBar.className = '';
+  else navigationBar.className = 'scroll';
+};
+
 //add javascript here for my small card, will this work?
 //set my variables
 
