@@ -6,7 +6,7 @@ h1 {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 60px;
   letter-spacing: 0.545em;
   text-transform: uppercase;
 }
@@ -169,6 +169,11 @@ nav {
   display: flex;
   justify-content: space-between;
   z-index: 100;
+  transition: background-color 0.4s ease-out;
+}
+.scroll {
+  background-color: #e7e9e9;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
 }
 ul {
   margin: 5px;
@@ -180,7 +185,7 @@ ul {
   align-items: center;
   animation-delay: 1s;
   top: 0px;
-  font-size: 40px;
+  font-size: 2.5em;
   letter-spacing: 20px;
   text-align: center;
 }
@@ -283,6 +288,15 @@ li {
   padding: 1vw;
   opacity: 0.8;
 }
+/*banner
+.banner-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 590px;
+}*/
 
 /* Cards */
 .card-photo-lg {
@@ -475,9 +489,36 @@ li {
   background-color: #dd5751;
 }
 
+/* Footer */
+footer {
+  background-color: #e7e9e9;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 64px;
+  width: 100vw;
+}
+.footer-links {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.footer-link-btn {
+  margin: 20px;
+}
+
+/* 
 @media only screen and (max-width: 1400px) {
   h1 {
-    font-size: 65px;
+    font-size: 1em;
     letter-spacing: 0.4em;
   }
 }
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 1em;
+    letter-spacing: 0.4em;
+  }
+}
+ */

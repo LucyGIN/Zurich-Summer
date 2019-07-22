@@ -94,7 +94,7 @@ video {
 
 .enterBTN {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 48%;
   border-radius: 40px;
   width: 177px;
@@ -102,6 +102,7 @@ video {
   background: #dd5751;
   border: none;
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
 }
 
 #btn {
