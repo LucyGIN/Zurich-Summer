@@ -72,3 +72,32 @@ function createQuestions(look, index) {
   //add question and answers
   questionSunContainer.appendChild(questionBox);
 }
+
+const placeIndexs = tree.cloudy.empty.far; //[1,7,3,9,12]
+
+const results = placeIndexs.map(function(index) {
+  return answerList[index];
+});
+
+const tree = {
+  sunny: {
+    crowded: {
+      near: [],
+      far: [],
+    },
+    empty: {
+      near: [],
+      far: [],
+    },
+  },
+  cloudy: {
+    crowded: {
+      near: [],
+      far: [],
+    },
+    empty: {
+      near: [],
+      far: [1, 7, 3, 9, 12],
+    },
+  },
+};
