@@ -5,31 +5,30 @@
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 400px;
-  padding: 80px;
 }
 
 .banner-text {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   z-index: 1;
-  text-transform: uppercase;
-  text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+  padding: 40px;
 }
-.banner-text h1 {
-  margin: 10px;
-  padding: 60px;
+.banner-text h4 {
+  margin-top: 50px;
 }
+
 .explore-section-title {
-  margin-top: 60px;
+  margin-top: 30px;
   margin-left: 20px;
   padding: 20px;
   text-align: left;
   margin-bottom: 20px;
   color: #dd5751;
+}
+.explore-section-title-map {
+  margin-top: 60px;
 }
 .explore-section-cards {
   display: flex;
@@ -58,7 +57,7 @@
 .card-main-title {
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  justify-content: center;
 }
 .card-icons {
   display: flex;
@@ -74,22 +73,22 @@
 }
 .share-section-container {
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  flex-wrap: wrap;
+
+  margin: 40px;
 }
 .share-section-text {
-  width: 420px;
+  width: 480px;
 }
 .share-section-photos {
   display: flex;
   position: relative;
-  width: 420px;
+
   margin-bottom: 20px;
 }
 .card-top-left {
   position: absolute;
   top: 0%;
-  right: 50%;
 }
 .card-top-right {
   position: absolute;
@@ -112,7 +111,4 @@
 .explore-map {
   display: flex;
   justify-content: center;
-}
-.footer-link-btn {
-  margin: 20px;
 }
