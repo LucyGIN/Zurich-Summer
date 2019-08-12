@@ -15,13 +15,9 @@
   <body>
     <div class="hidden navlist">
       <ul>
-        <li class="home"><a href="startpage.html" id="navA">HOME</a></li>
-        <li class="swim"><a href="placeswim.html" id="navA">SWIM</a></li>
-        <li class="lounge"><a href="placeslounge.html" id="navA">LOUNGE</a></li>
-        <li class="food"><a href="placesfood.html" id="navA">FOOD</a></li>
-        <li class="coffee"><a href="placescoffee.html" id="navA">COFFEE</a></li>
-        <li class="events"><a href="homepage.html" id="navA">EVENTS</a></li>
-        <li class="share"><a href="homepage.html" id="navA">SHARE</a></li>
+        <li class="swim"><a href="placeswim.html" id="navA">HOME</a></li>
+        <li class="lounge"><a href="placeslounge.html" id="navA">SHARE</a></li>
+        <li class="food"><a href="placesfood.html" id="navA">MAP</a></li>
         <li class="styleGuide">
           <a href="stylesite.html" id="navA">STYLE</a>
         </li>
@@ -378,12 +374,27 @@
         <div class="button-specifications-container forms">
             <div class="simpleForm-container">
              <div class="simpleForm-title"><h2>FIND MY SUMMER SPOT</h2></div>   
-             <div class="simpleForm-question"> <h4>This would be the question?</h4></div> <br>
-            <label class="simpleForm"> test text
-                        <input type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
+             <div class="form-container">
+                    <div class="simpleForm-question "> <h4>Name of Location:</h4></div> <br>
+                <input class="simpleForm form-text" type="text" name="locationname" placeholder="Name of Location">
+                     <br>
+                    <div class="simpleForm-question"> <h4>Select Type of Location:</h4></div> <br>
+                  <div class="form-answer-container">
+                    <div class="form-left">
+
+                      <!--check somthing-->
+                      <div class="simpleForm share-form"> 
+                          <input type="checkbox" id="swimming" name="scales">
+                          <label for="swimming"><img class="input-icon" src="icons/swimSM.svg">
+                            swimming!</label>
+                        </div>
+
+                     <div class= "simpleForm share-form">   
+                      <input type="checkbox" name="categoryApero">   
+                      <label for="apero"> <img class="input-icon" src="icons/aperoSM.svg"> an apero, to eat, or coffee  
                       </label>
-            </div>
+                    </div> 
+                     </div>
          </div>
 
 
@@ -434,11 +445,11 @@
     <footer>
         <div class="footer-links">
            <button class="linkBtn border footer-link-btn"> <a href="startpage.html">ENTER</a> </button>
-           <button class="linkBtn border footer-link-btn" > <a href="homepage.html">HOME</a> </button>
-           <button class="linkBtn border footer-link-btn"> <a href="homepage.html">SHARE</a>  </button>
+           
         </div>
     </footer>
   </body>
   <script src="index.js"></script>
   <script src="formSunnySpot.js"></script>
+  <script src="scroll_items.js"></script>
 </html>

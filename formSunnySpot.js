@@ -73,16 +73,41 @@ function createQuestions(look, index) {
   questionSunContainer.appendChild(questionBox);
 }
 
-const placeIndexs = tree.cloudy.empty.far; //[1,7,3,9,12]
+const answerList = [
+    'bridge',
+    'swimming',
+    ...
+]
+
+
+
+const answer1 = document.querySelector('.question1 input:checked').innerText //sunny
+const answer2 = document.querySelector('.question2 input:checked').innerText //crowded
+const answer3 = document.querySelector('.question3 input:checked').innerText //far
+
+
+const placeIndexs = tree[answer1][answer2][answer3] //[1,7,3,9,12]
 
 const results = placeIndexs.map(function(index) {
   return answerList[index];
 });
 
+createElemet('div')
+div.appendChild('h1')
+h1.innerText = answer.name
+
+{
+    name: 'badi enge',
+    adress: 'zyx stree',
+    bestTimeToGo: '2pm'
+}
+
+//answerList[1], answerList[7], answerList[3], answerList[9], answerList[12]
+
 const tree = {
   sunny: {
     crowded: {
-      near: [],
+      near: [2, 4, 6, 9],
       far: [],
     },
     empty: {

@@ -4,13 +4,655 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <title>FOOD ZH</title>
+    <link rel="stylesheet" type="text/css" href="map.css" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <title>MAP ZH</title>
   </head>
   <body>
-    <h1>This is where food will go</h1>
+      <div class="hidden navlist">
+          <ul>
+            <!--<li class="home"><a href="startpage.html" id="navA">HOME</a></li>-->
+            <li class="swim"><a href="placeswim.html" id="navA">HOME</a></li>
+            <li class="lounge"><a href="placeslounge.html" id="navA">SHARE</a></li>
+            <li class="food"><a href="placesfood.html" id="navA">MAP</a></li>
+            <li class="styleGuide"><a href="stylesite.html" id="navA">STYLE</a>
+            </li>
+          </ul>
+        </div>
+        <nav class="navigationBar">
+          <button class="navbutton">
+            <img class="menuIcon" src="./icons/outline-menu-24px.svg" />
+          </button>
+          <img class="logo" src="images/smallLogo.svg" width="40px" />
+        </nav>
+      <div class="banner-photo-header">
+          <div class="banner-text">
+            <div><h4>Ginetta's Favorite summer spots</h4> </div>
+          </br>
+            <div><h1>explore and find</h1> </div>
+            <div class="mainCTA">
+            </div>
+          </div>
+        </div>
+    <!--HERE IS THE MAP HTML-->
+    <div id="map"></div>
+    <div id="features">
+      <section id="baker" class="active">
+        <h3 class="captionapero">Frischer Fritz</h3>
+        <br>
+        <img class="card-photo-md" src="images/frischerfritz_apero.png">
+        <br>
+        <p class="captionapero">
+         Relax at Fischers Fritz, directly on Lake Zurich, while tucking into some tasty “Fischchnusperli”. 
+         They have a mix of it all: Restaurant, beach, camping, beach sports, shop and fishery.
+         <div class="card-icons">
+            <img class="smicon" src="./icons/aperoSM.svg" />
+            <img class="smicon" src="./icons/sunny.svg" />
+            <img class="smicon" src="./icons/peoplewatch.svg" />
+            <img class="smicon" src="./icons/far.svg" />
+          </div>
+        </p>
+      </section>
+
+      <section id="roteFabrik">
+        <h3 class="captionapero">Rote Fabrik</h3>
+        <br>
+        <img class="card-photo-md" src="images/Rote Fabrik_apero.png">
+        <br>
+        <p class="captionapero">
+            Rotefabrik has it's options of what to do there, have an apero, watch a concert or hop into 
+            the lake from one of their diving boards. It's a beautiful view of the lake and a nice place 
+            to dive in if it's too hot for an apero.
+            <div class="card-icons">
+                <img class="smicon" src="./icons/aperoSM.svg" />
+                <img class="smicon" src="./icons/swimSM.svg" />
+                <img class="smicon" src="./icons/eventSM.svg" />
+                <img class="smicon" src="./icons/sunny.svg" />
+                <img class="smicon" src="./icons/peoplewatch.svg" />
+                <img class="smicon" src="./icons/far.svg" />
+              </div>
+        </p>
+      </section>
+
+      <section id="saffaInsel">
+        <h3 class="captionswim">Saffa Insel</h3>
+        <br>
+        <img class="card-photo-md" src="images/saffaInsel_swim.png">
+        <p class="captionswim">
+            Over at wollishofen you can cross the little bridge and relax on the Saffa Insel. 
+            There is plenty of choices to find your perfect sunbathing area or perch under a large tree 
+            for shade.
+            <div class="card-icons">
+                <img class="smicon" src="./icons/swimSM.svg" />
+                <img class="smicon" src="./icons/sunny.svg" />
+                <img class="smicon" src="./icons/shady.svg" />
+                <img class="smicon" src="./icons/peoplewatch.svg" />
+                <img class="smicon" src="./icons/far.svg" />
+              </div>
+        </p>
+      </section>
+      <section id="forkBottle">
+        <h3 class="captionapero">Fork & Bottle</h3>
+        <br>
+        <img class="card-photo-md" src="images/forkBottle_apero.jpg">
+        <br>
+        <p class="captionapero">
+            Known for being Zurich's only farm-to-table restaurant offering an ever-changing menu of craft beer, 
+            Fork & Bottle invites you in to enjoy great food and drink in a relaxed country setting.
+            <div class="card-icons">
+                <img class="smicon" src="./icons/aperoSM.svg" />
+                <img class="smicon" src="./icons/shady.svg" />
+                <img class="smicon" src="./icons/secluded.svg" />
+                <img class="smicon" src="./icons/far.svg" />
+              </div>
+        </p>
+      </section>
+      <section id="mythenquai">
+        <h3 class="captionswim">Mythenquai</h3>
+        <br>
+        <img class="card-photo-md" src="images/mythenqaui_swim.png">
+        <p class="captionswim">
+            This lakeside open-air public swimming bath, with its non-swimmer area and water fountains, 
+            is particularly suitable for children. It has a sandy beach and grassy sunbathing area.
+         Stand up paddles are also available for rent here.
+         <div class="card-icons">
+            <img class="smicon" src="./icons/swimSM.svg" />
+            <img class="smicon" src="./icons/sunny.svg" />
+            <img class="smicon" src="./icons/peoplewatch.svg" />
+            <img class="smicon" src="./icons/far.svg" />
+          </div>
+        </p>
+      </section>
+      <section id="chinaGarden">
+        <h3 class="captionswim">China Garden</h3>
+        <br>
+        <img class="card-photo-md" src="images/chinagarten2.jpg">
+        <br>
+        <p class="captionswim">
+            It is a great place to get into the lake from the golden coast. There is plenty of spots 
+            along the lake shore or enjoy the large 'wiese' and lay in the grass. There is a picking 
+            of spots if your looking to hide under the shade. And plenty of BBQ's and music around 
+            to hear.  
+            <div class="card-icons">
+                <img class="smicon" src="./icons/swimSM.svg" />
+                <img class="smicon" src="./icons/sunny.svg" />
+                <img class="smicon" src="./icons/peoplewatch.svg" />
+                <img class="smicon" src="./icons/near.svg" />
+              </div>
+            </p>
+        </p>
+      </section>
+      <section id="samigo">
+        <h3 class="captionapero">Samigo</h3>
+        <br>
+        <img class="card-photo-md" src="images/samigo_apero.jpg">
+        <br>
+        <p class="captionapero">
+            Looking to fuel your senses and a place to enjoy a drink 
+            but with a spice. At Samigo you can expect a unique experience of 
+            drag-queens,fire-eaters, burlesque dancers and international food and drinks.
+          <div class="card-icons">
+              <img class="smicon" src="./icons/aperoSM.svg" />
+              <img class="smicon" src="./icons/sunny.svg" />
+              <img class="smicon" src="./icons/peoplewatch.svg" />
+              <img class="smicon" src="./icons/near.svg" />
+            </div>
+        </p>
+      </section>
+      <section id="rietbergPark">
+        <h3 class="captionlounge">Rieter Park</h3>
+        <img class="card-photo-md" src="images/RieterPark.png">
+        <br>
+        <p class="captionlounge">
+            The Rieterpark is Zurich's largest and most impressive landscape garden 
+            and is located in the Zurich Enge area of the city, not far from Lake Zurich.
+          <div class="card-icons">
+              <img class="smicon" src="./icons/loungeSM.svg" />
+              <img class="smicon" src="./icons/sunny.svg" />
+              <img class="smicon" src="./icons/shady.svg" />
+              <img class="smicon" src="./icons/secluded.svg" />
+              <img class="smicon" src="./icons/near.svg" />
+            </div>
+        </p>
+      </section>
+      <section id="panorama">
+          <h3 class="captionlounge">Panorama Weg</h3>
+          <br>
+        <img class="card-photo-md" src="images/panoramaweg-lounge.png"/>
+        <br>
+          <p class="captionlounge">
+              The perfect place to get the top views of Zurich a nice trail that 
+              is just the hike you need on an evening. Enjoy a picinic at the top, 
+              or escpae the cloudy evening in spring and fall and get above the clouds.
+            <div class="card-icons">
+                <img class="smicon" src="./icons/loungeSM.svg" />
+                <img class="smicon" src="./icons/sunny.svg" />
+                <img class="smicon" src="./icons/shady.svg" />
+                <img class="smicon" src="./icons/secluded.svg" />
+                <img class="smicon" src="./icons/near.svg" />
+              </div>
+          </p>
+        </section>
+      <section id="ginetta">
+          <h3 class="captionlounge">Ginetta Terrace</h3>
+          <br>
+          <img class="card-photo-md" src="images/ginettaTerrace_lounge.png"/>
+          <br>
+          <p class="captionlounge">
+              Every Thursday when the sun is shining you can find ginetta enjoying 
+              there apero on the terrace. In the summer you might even encounter a sprinkler fight.
+            <div class="card-icons">
+                <img class="smicon" src="./icons/loungeSM.svg" />
+                <img class="smicon" src="./icons/sunny.svg" />
+                <img class="smicon" src="./icons/shady.svg" />
+                <img class="smicon" src="./icons/secluded.svg" />
+                <img class="smicon" src="./icons/near.svg" />
+              </div>
+          </p>
+        </section>
+        <section id="hafenEnge">
+            <h3 class="captionapero">Hafen Enge Kiosk</h3>
+            <br>
+            <img class="card-photo-md" src="images/HafenEnge_kiosk-apero.png"/>
+            <br>
+            <p class="captionapero">
+                A nice place at the lake to have a morning coffee with a view or an evening apero.
+                In case the line or crowd is too large at Seebad Enge, the kiosk is a perfect place to grab
+                a snack or drink. 
+              <div class="card-icons">
+                  <img class="smicon" src="./icons/aperoSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                  <img class="smicon" src="./icons/near.svg" />
+                </div>
+            </p>
+          </section>
+          <section id="seebadEnge">
+              <h3 class="captionswim">Seebad Enge</h3>
+              <br>
+              <img class="card-photo-md" src="images/SeebadEnge.png"/>
+              <br>
+              <p class="captionswim">
+                  A visit to the seaside resort of Enge with its unique location on Lake Zurich 
+                  and its alpine panorama is an experience all year round. Perfect for you all year 
+                  round depending on the season as a bathing establishment, restaurant or sauna on the lake. 
+                <div class="card-icons">
+                    <img class="smicon" src="./icons/swimSM.svg" />
+                    <img class="smicon" src="./icons/sunny.svg" />
+                    <img class="smicon" src="./icons/peoplewatch.svg" />
+                    <img class="smicon" src="./icons/near.svg" />
+                  </div>
+              </p>
+            </section>
+           
+              <section id="rentenwiese">
+                  <h3 class="captionswim">Rentenwiese</h3>
+                  <br>
+                  <img class="card-photo-md" src="images/rentenwiese-swim-lounge.png"/>
+                  <br>
+                  <p class="captionswim">
+                      A popular spot to go lay in the sun and hide under some shade. There is a 
+                      little stony beach that gives easy access to slowly enter the lake.
+                    <div class="card-icons">
+                        <img class="smicon" src="./icons/swimSM.svg" />
+                        <img class="smicon" src="./icons/sunny.svg" />
+                        <img class="smicon" src="./icons/peoplewatch.svg" />
+                        <img class="smicon" src="./icons/near.svg" />
+                      </div>
+                  </p>
+                </section>
+                <section id="rimini">
+                    <h3 class="captionapero">Rimini Bar</h3>
+                    <br>
+                    <img class="card-photo-md" src="images/RiminiBar-apero.png"/>
+                    <br>
+                    <p class="captionapero">
+                        Nested away along the Sihl you'll find Rimini Bar, a great place to 
+                        enjoy a cocktail and some refreshments. Here, guests chill out on oriental cushions 
+                        and enjoy grilled specialties and sip on cool drinks.
+
+                      <div class="card-icons">
+                          <img class="smicon" src="./icons/aperoSM.svg" />
+                          <img class="smicon" src="./icons/sunny.svg" />
+                          <img class="smicon" src="./icons/secluded.svg" />
+                          <img class="smicon" src="./icons/near.svg" />
+                        </div>
+                    </p>
+                  </section>
+       <section id="lindenhof">
+          <h3 class="captionlounge">Lindenhof</h3>
+           <br>
+           <img class="card-photo-md" src="images/Lindenhof-lounge.png"/>
+           <br>
+            <p class="captionlounge">
+                A nice place to get a good view of the old town. A good place 
+                for dates or to take visitors. "‘Especially magical on a sunny Autumn 
+                day when you can walk across a carpet of crisp leaves under bright 
+                amber trees!’ - Louise
+              <div class="card-icons">
+                 <img class="smicon" src="./icons/loungeSM.svg" />
+                  <img class="smicon" src="./icons/shady.svg" />
+                  <img class="smicon" src="./icons/secluded.svg" />
+                  <img class="smicon" src="./icons/near.svg" />
+               </div>
+             </p>
+        </section> 
+        <section id="henrici">
+            <h3 class="captionapero">Henrici Cafe</h3>
+             <br>
+             <img class="card-photo-md" src="images/henrici-apero.jpg"/>
+             <br>
+              <p class="captionapero">
+                  This modern café in Zürich’s Niederdorf is completely devoted to coffee.
+                  Drinking coffee is a true experience at Heinrici, where there is everything 
+                  from classic coffees to creative coffee cocktails to choose from. In addition, 
+                  exquisite baked creations will add a sweet complement to select, aromatic coffee varieties
+                <div class="card-icons">
+                   <img class="smicon" src="./icons/aperoSM.svg" />
+                    <img class="smicon" src="./icons/shady.svg" />
+                    <img class="smicon" src="./icons/peoplewatch.svg" />
+                    <img class="smicon" src="./icons/near.svg" />
+                 </div>
+               </p>
+          </section>
+          <section id="golosone">
+              <h3 class="captionapero">Golosone</h3>
+               <br>
+               <img class="card-photo-md" src="images/golosone-food.jpg"/>
+               <br>
+                <p class="captionapero">
+                    A nice italian restaurant in the city center. Tasty dishes
+                    and big portions makes it the perfect place to go with friends. Great location and good food.
+                  <div class="card-icons">
+                     <img class="smicon" src="./icons/aperoSM.svg" />
+                      <img class="smicon" src="./icons/sunny.svg" />
+                      <img class="smicon" src="./icons/peoplewatch.svg" />
+                      <img class="smicon" src="./icons/near.svg" />
+                   </div>
+                 </p>
+            </section> 
+            <section id="rioBar">
+                <h3 class="captionapero">Rio Bar</h3>
+                 <br>
+                 <img class="card-photo-md" src="images/rioBar-apero.png"/>
+                 <br>
+                  <p class="captionapero">
+                      A unique garden bar right next to Zürich Main Station, 
+                      surrounded by old trees, a river confluence, and a big intersection.
+                    <div class="card-icons">
+                       <img class="smicon" src="./icons/aperoSM.svg" />
+                        <img class="smicon" src="./icons/sunny.svg" />
+                        <img class="smicon" src="./icons/peoplewatch.svg" />
+                        <img class="smicon" src="./icons/near.svg" />
+                     </div>
+                   </p>
+              </section> 
+              <section id="kinoXenix">
+                  <h3 class="captionapero">Kino Xenix</h3>
+                   <br>
+                   <img class="card-photo-md" src="images/rioBar-apero.png"/>
+                   <br>
+                    <p class="captionapero">
+                        A nice place to go for a drink and to hangout with friends, there is also a park and 
+                        sometimes live music. And if it's a rainy day it's also the place to go to watch an art-house movie
+                      <div class="card-icons">
+                         <img class="smicon" src="./icons/aperoSM.svg" />
+                          <img class="smicon" src="./icons/sunny.svg" />
+                          <img class="smicon" src="./icons/peoplewatch.svg" />
+                          <img class="smicon" src="./icons/near.svg" />
+                       </div>
+                     </p>
+                </section>   
+       <section id="backi">
+           <h3 class="captionlounge">Bäckenerlage</h3>
+           <br>
+           <img class="card-photo-md" src="images/backi-lounge.jpg"/>
+           <br>
+           <p class="captionlounge">
+              The "Bäcki" park is one of the most beautiful green areas 
+              in the city of Zurich. Near langstrasse, it's a nice place to relax 
+              and everyone once in a while expereience open air concerts, it is a recreational paradise.
+              <div class="card-icons">
+                  <img class="smicon" src="./icons/loungeSM.svg" />
+                 <img class="smicon" src="./icons/aperoSM.svg" />
+                 <img class="smicon" src="./icons/sunny.svg" />
+                 <img class="smicon" src="./icons/peoplewatch.svg" />
+                  <img class="smicon" src="./icons/near.svg" />
+               </div>
+            </p>
+        </section> 
+        <section id="theBite">
+            <h3 class="captionapero">The Bite</h3>
+            <br>
+            <img class="card-photo-md" src="images/the bite-eat.png"/>
+            <br>
+            <p class="captionapero">
+               "Best burgers in town"
+               <div class="card-icons">
+                 
+                  <img class="smicon" src="./icons/aperoSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+           
+         <section id="kokoro">
+            <h3 class="captionapero">Kokoro</h3>
+            <br>
+            <img class="card-photo-md" src="images/kokoro-aperofood.png"/>
+            <br>
+            <p class="captionapero">
+                "My favorite Japanese restaurant." - Simon 
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/aperoSM.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section> 
+         <section id="letzigraben">
+            <h3 class="captionswim">Badi Letzigraben</h3>
+            <br>
+            <img class="card-photo-md" src="images/letzibad_swim-ariel.png"/>
+            <br>
+            <p class="captionswim">
+               Enjoy three different swimming pools one for divers, one for swimming laps,
+               and another for the little ones. Letzibad has a large green space in between each of the pools 
+               to sunbathe or soak up some sun.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="bullingerplatz">
+            <h3 class="captionlounge">Bullingerplatz</h3>
+            <br>
+            <img class="card-photo-md" src="images/bullingerplatz.png"/>
+            <br>
+            <p class="captionlounge">
+                A great spot nooked into the city and the neighborhood. 
+                Enjoy sitting around the fountain at Bullingerplatz, or at the Cafe Bonhuer and enjoy a
+                delicous brunch or an easy drink in the evening.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/aperoSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="josefwiese">
+            <h3 class="captionlounge">Josefwiese</h3>
+            <br>
+            <img class="card-photo-md" src="images/josefwiesse.png"/>
+            <br>
+            <p class="captionlounge">
+                This park, which is highly popular among the locals, is situated next to the viaduct in the trendy Zurich-West 
+                quarter. Whether soccer, pétanque, table tennis or or families with children – when the weather 
+                is fine, everyone convenes in the Josefwiese park.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="obererLetten">
+            <h3 class="captionswim">Oberer Letten</h3>
+            <br>
+            <img class="card-photo-md" src="images/obererLetten_swim.png"/>
+            <br>
+            <p class="captionswim">
+                Super close to the main station is the Oberer Letten swimming area. 
+                It's a popular meeting place and a good spot to hop in at the top of 
+                the river if you want to float down for a stretch. There are sun 
+                terrraces and a bar nearby.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="untererLetten">
+            <h3 class="captionswim">Unterer Letten</h3>
+            <br>
+            <img class="card-photo-md" src="images/untererletten_swim.png"/>
+            <br>
+            <p class="captionswim">
+                Jump into the river and float away with the current. This is a popular gathering
+                for Zurich locals. If it get's too crowded you can find a 
+                little river nook along the way.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="beast">
+            <h3 class="captionlounge">Stadion Brache 'The Beast'</h3>
+            <br>
+            <img class="card-photo-md" src="images/best_lounge.jpg"/>
+            <br>
+            <p class="captionlounge">
+                At Stadionbrache you will find good vibes, it is a verein that has gardens, 
+                a stone brick oven, and a DIY skatebowl. Skateboard, grill, hang out, explore 
+                the gardens. A little oasis for skaters and freaks alike. Bring your friends 
+                to bake a pizza and hang in the garden or kick back and watch the skaters do 
+                their thing. It's a beauty.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/loungeSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/peoplewatch.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="nook1">
+            <h3 class="captionswim">Limmat Nook</h3>
+            <br>
+            <img class="card-photo-md" src="images/LettenBridge_rockIsland.png"/>
+            <br>
+            <p class="captionswim">
+                One of those perfect Limmat river nooks. Looking for somewhere away from the crowd 
+                to just sit in the river, this is a good option. This rocky island is great 
+                to sit in the water without floating away.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/shady.svg" />
+                  <img class="smicon" src="./icons/secluded.svg" />
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section> 
+         <section id="nook2">
+            <h3 class="captionswim">Limmat Nook</h3>
+            <br>
+            <img class="card-photo-md" src="images/LettenRocks_swim.png"/>
+            <br>
+            <p class="captionswim">
+                If your floating down the Limmat or searching for somewhere to dip in. 
+                This spot on the limmat is nice to rest and meditate on the rocks, or 
+                hop in a little bit earlier and swim to the rocks.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/secluded.svg" />
+                   <img class="smicon" src="./icons/far.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="werdInsel">
+            <h3 class="captionswim">Werd Insel</h3>
+            <br>
+            <img class="card-photo-md" src="images/werdInsel_swim.png"/>
+            <br>
+            <p class="captionswim">
+                Another island is zurich but along the river. It's also the perfect spot 
+                to start your river float down the letten with a 'gummi boot' and float 
+                all the way down to Dietikon.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/secluded.svg" />
+                   <img class="smicon" src="./icons/far.svg" />
+                </div>
+             </p>
+         </section> 
+         <section id="dynamo">
+            <h3 class="captionevent"> UX meetups at Dynamo</h3>
+            <br>
+            <img class="card-photo-md" src="images/dynamo.png"/>
+            <br>
+            <p class="captionevent">
+                We meet every first Wednesday of the month.
+                UX Happy Hour is all about meeting other designers. It's an informal event and 
+                it's open to anyone who's interested in design. Developers, PMs and founders 
+                are all welcome! There aren't any talks or workshops, it's just designers hanging out.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/eventSM.svg" />
+                  <img class="smicon" src="./icons/aperoSM.svg" />
+                  
+                   <img class="smicon" src="./icons/near.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="dolderTrail">
+            <h3 class="captionlounge"> Dolder Trail</h3>
+            <br>
+            <img class="card-photo-md" src="images/dolderForest-lounge.jpg"/>
+            <br>
+            <p class="captionlounge">
+                Take the tram to Dolder and walk in the forest late 
+                in the evening, best in winters, and enjoy a fondue at restaurant Degenried.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/loungeSM.svg" />
+                  <img class="smicon" src="./icons/shady.svg" />
+                  <img class="smicon" src="./icons/secluded.svg" />
+                   <img class="smicon" src="./icons/far.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="dolderBad">
+            <h3 class="captionswim">Dolder Bad</h3>
+            <br>
+            <img class="card-photo-md" src="images/dolderBad_swim.jpg"/>
+            <br>
+            <p class="captionswim">
+                Dolder Bad is situated high on the Adlisberg in idyllic natural surroundings. 
+                In addition to the outdoor pool, there is a tree-lined lawn with areas for 
+                sport and sunbathing, a children’s play area, two paddling pools and a sandpit, 
+                as well as four table tennis tables and a volleyball pitch.
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/secluded.svg" />
+                  <img class="smicon" src="./icons/aperoSM.svg" />
+                   <img class="smicon" src="./icons/far.svg" />
+                </div>
+             </p>
+         </section>
+         <section id="katzensee">
+            <h3 class="captionswim">Katzensee</h3>
+            <br>
+            <img class="card-photo-md" src="images/Katzensee-swim.png"/>
+            <br>
+            <p class="captionswim">
+                A nice place to go escape the Zurichsee crowd. Also nice to 
+                lounge at different parts of the lake and not their designated 
+                Badi. You can also take a hike around the lake and have 
+                beautiful views along the way!
+               <div class="card-icons">
+                  <img class="smicon" src="./icons/swimSM.svg" />
+                  <img class="smicon" src="./icons/sunny.svg" />
+                  <img class="smicon" src="./icons/secluded.svg" />
+                   <img class="smicon" src="./icons/far.svg" />
+                </div>
+             </p>
+         </section>                      
+    </div>
   </body>
+  <script src="mapzoom.js"></script>
+  <script src="index.js"></script>
 </html>

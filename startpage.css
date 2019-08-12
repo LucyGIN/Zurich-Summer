@@ -27,7 +27,7 @@ video {
   justify-content: center;
   text-align: center;
   top: 30%;
-  left: 45%;
+  left: calc((100vw - 100px) / 2);
 
   z-index: 1;
   font-size: 4vw;
@@ -36,15 +36,13 @@ video {
 /*animated text */
 .type {
   z-index: 1;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   white-space: nowrap;
   text-align: center;
   animation: typing 3s steps(23);
   opacity: 0;
-  border-right: 3px solid #d2f4fa;
+  border-right: 3px solid black;
   position: absolute;
-
   top: 70%;
 }
 
@@ -67,7 +65,7 @@ video {
 }
 
 .type6 {
-  animation-delay: 20s;
+  animation-delay: 16s;
 
   animation-fill-mode: forwards;
 }
@@ -82,7 +80,7 @@ video {
     opacity: 1;
   }
   90% {
-    width: 50vw;
+    width: 28vw;
     opacity: 1;
   }
   100% {
@@ -92,11 +90,13 @@ video {
 
 .enterBTN {
   position: absolute;
-  top: 70%;
-  left: calc((100vw - 190px) / 2);
+  top: 50%;
+  left: calc((100vw - 200px) / 2);
   border-radius: 40px;
-  width: 190px;
-  height: 56px;
+  width: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 50px;
   background: #dd5751;
   border: none;
   padding: 10px 10px;
