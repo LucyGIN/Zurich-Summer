@@ -1,0 +1,74 @@
+.banner-photo-header {
+  background: url('./images/obererLetten_swim.png');
+
+  background-color: rgba(252, 244, 213, 0.6);
+  background-blend-mode: overlay;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  margin-left: 50%;
+  height: 400px;
+  position: relative;
+}
+.banner-text {
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
+  padding: 40px;
+}
+.banner-text h4 {
+  margin-top: 50px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+#map {
+  position: fixed;
+  width: 50%;
+}
+#features {
+  width: 50%;
+  top: 0;
+  margin-left: 50%;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  background-color: #e7e0ef;
+}
+section {
+  padding: 25px 50px;
+  line-height: 25px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0.25;
+  font-size: 13px;
+}
+section.active {
+  opacity: 1;
+}
+section:last-child {
+  border-bottom: none;
+  margin-bottom: 200px;
+}
+#baker, #roteFabrik, #forkBottle, #samigo, #hafenEnge, #rimini, #henrici, #golosone, #rioBar, #kinoXenix, #theBite, #kokoro {
+    background-color: #fcf4d5;
+}
+
+#rietbergPark, #ginetta, #panorama, #lindenhof, #backi, #bullingerplatz, #josefwiese, #beast, #dolderTrail, #sonenberg{
+    background-color: #c0eee7;
+}
+.event{
+    background-color: #e7e0ef;
+}
+ 
+#saffaInsel, #mythenquai, #seeBadEnge,#chinaGarden, #rentenwiese, #letzigraben, #obererLetten, #untererLetten, #nook1, #nook2, #werdInsel, #dolderBad, #katzensee{
+    background-color: #d2f4fa;
+}

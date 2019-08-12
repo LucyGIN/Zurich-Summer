@@ -11,17 +11,15 @@
     <link rel="stylesheet" type="text/css" href="placesswim.css" />
 
     <title>SWIM ZH</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <div class="hidden navlist">
       <ul>
-        <li class="home"><a href="startpage.html" id="navA">HOME</a></li>
-        <li class="swim"><a href="placeswim.html" id="navA">SWIM</a></li>
-        <li class="lounge"><a href="placeslounge.html" id="navA">LOUNGE</a></li>
-        <li class="food"><a href="placesfood.html" id="navA">FOOD</a></li>
-        <li class="coffee"><a href="placescoffee.html" id="navA">COFFEE</a></li>
-        <li class="events"><a href="homepage.html" id="navA">EVENTS</a></li>
-        <li class="share"><a href="homepage.html" id="navA">SHARE</a></li>
+        <li class="home"><a href="placeswim.html" id="navA">HOME</a></li>
+        <li class="lounge"><a href="placeslounge.html" id="navA">SHARE</a></li>
+        <li class="food"><a href="placesfood.html" id="navA">MAP</a></li>
         <li class="styleGuide">
           <a href="stylesite.html" id="navA">STYLE</a>
         </li>
@@ -34,17 +32,92 @@
       <img class="logo" src="images/smallLogo.svg" width="40px" />
     </nav>
     <!--banner-->
-    <section class="banner-style">
-      <div>
-        <h1>swim</h1>
-        <img src="icons/swimLG.svg" />
-      </div>
-    </section>
+    <section class="banner-photo-header">
+        <div class="banner-text">
+          <div><h4>Ginetta's Favorite</h4> </div>
+        </br>
+          <div><h1>summer spots</h1> </div>
+          <br>
+          <div class="mainCTA">
+            <a href="./placeslounge.html" class="btn1 mainBTN CTA">SHARE YOURS</a></button>
+            <a href="./placesfood.html" class="btn1 mainBTN CTA"> Enter Map View</a>
+          </div>
+        </div>
+      </section>
+<!--Category Filter selectors-->
+<section class="filter-selector">
+  <div class="filter-container">
+      <button class="swimBtn">
+    <div class="section-box swim-box captionswim">
+      
+      <h2>SWIM</h2> 
+      <img class="icon-shrink" src="icons/swimLG.svg">
+    </div>
+  </button> 
+  <button class="loungeBtn">
+    <div class="section-box lounge-box captionlounge">
+      <h2>LOUNGE</h2>
+      <img class="icon-shrink" src="icons/loungeLG-01.svg">
+    </div>
+  </button>
+  <button class="aperoBtn">
+    <div class="section-box apero-box captionapero">
+      
+      <h2>APERO</h2>
+      <img class="icon-shrink" src="icons/aperoLG.svg">
+    </div>
+  </button>
+  <button class="eventBtn">
+    <div class="section-box event-box captionevent">
+     
+      <h2>EVENT</h2>
+      <img class="icon-shrink" src="icons/eventsLG.svg">
+    </div>
+  </button>
+  </div>
+</section>
+
+<section>
+    <div class="keySection">
+  <h4>Characteristics Legend</h4>
+    <br></div>
+ 
+    <div class="keyCenter">
+  <div class="smallKey">
+  
+    <p class="sunny">Sunny
+      <br>
+      <img src="icons/sunny.svg">
+    </p>
+    <p class="shady">Shady
+      <br>
+      <img src="icons/shady.svg">
+    </p>
+    <p class="crowded">People Watch
+      <br>
+      <img src="icons/peoplewatch.svg">
+    </p>
+    <p class="secluded">Secluded
+      <br>
+      <img src="icons/secluded.svg">
+    </p>
+    <p class="near">Near
+      <br>
+      <img src="icons/near.svg">
+    </p>
+    <p class="far">"Far"
+      <br>
+      <img src="icons/far.svg">
+    </p>
+  </div>
+</div>
+
+</section>
     <section class="photo-scroll">
       <div class="photo-scroll-container">
         <!--First photo-->
-       
-          <div class="card-photo-lg card-photo">
+         
+          <div class="card-photo-lg card-photo swim apero">
             <img
               class="photo-lg"
               id="seeBad-card"
@@ -71,61 +144,162 @@
                 </div>
                 <br />
                 <div class="card-link">
-                  <button class="linkBtn">Explore ></button>
-                  <button class="linkBtn">Find ></button>
+                  <button class="linkBtn"> <a href="https://www.seebadenge.ch/wp/" target="_blank">See More ></a></button>
+                  <button class="linkBtn"> <a href="./placesfood.html#seebadEnge">Find > </a></button>
                 </div>
               </div>
             </div>
           </div>
-       
-          
-
-          <!--one md one -->
-          
-          <div class="card-photo-md card-photo">
-              <img class="photo-md" src="./images/roteFabrik_swim.png" />
-              <div class="photo-title captionswim"><h2>Rotefabrik</h2></div>
-              <div class="card-photo-overlay  overlayswim">
-                <div class="card-photo-caption captionmd captionswim">
-                  <h4>Rotefabrik</h4>
-                  <br />
-                  <p>
-                    Rotefabrik has it's options of what to do there, have an apero, watch
-                    a concert or hop into the lake from one of their diving boards. It's a beautiful
-                    view of the lake and a nice place to dive in if it's too hot for an apero.
-                  </p>
-                  <div class="card-icons">
-                    <img class="smicon" src="./icons/loungeSM.svg" />
-                    <img class="smicon" src="./icons/shady.svg" />
-                    <img class="smicon" src="./icons/secluded.svg" />
-                    <img class="smicon" src="./icons/far.svg" />
-                  </div>
-                  <br />
-                  <div class="card-link">
-                    <button class="linkBtn">Explore ></button>
-                    <button class="linkBtn">Find ></button>
-                  </div>
-                </div>
+       <!-- 2 one md lounge-->
+       <div class="card-photo-md card-photo lounge">
+          <img class="photo-md" src="./images/ginettaTerrace_lounge.png" />
+          <div class="photo-title captionlounge"><h2>Ginetta Terrace</h2></div>
+          <div class="card-photo-overlay  overlaylounge">
+            <div class="card-photo-caption captionmd captionlounge">
+              <h4>Ginetta Terrace</h4>
+              <br />
+              <p>
+                Every Thursday when the sun is shining you can find ginetta enjoying there apero on the terrace.
+                In the summer you might even encounter a sprinkler fight.
+              </p>
+              <div class="card-icons">
+                <img class="smicon" src="./icons/loungeSM.svg" />
+                <img class="smicon" src="./icons/shady.svg" />
+                <img class="smicon" src="./icons/secluded.svg" />
+                <img class="smicon" src="./icons/far.svg" />
+              </div>
+              <br />
+              <div class="card-link">
+                <button class="linkBtn"><a href="https://ginetta.net/" target="_blank">Learn More ></a></button>
+                <button class="linkBtn"><a href="./placesfood.html#ginetta">Find ></a></button>
               </div>
             </div>
- <!--one sm one -->
+          </div>
+        </div>
+
+        
+ <!--3 one sm one -->
 
 
-       <div class="card-photo-sm card-photo">
-               <img class="photo-sm card-photo" src="./images/mythenqaui_swim.png">  
+       <div class="card-photo-sm card-photo swim">
+               <img class="photo-sm" src="./images/mythenqaui_swim.png">  
                <div class="photo-title captionswim"><h2>Mythenquai</h2></div>
                <div class="card-photo-overlay overlaysm overlayswim">
                <div class="card-photo-caption captionsm captionswim"> 
-               <h4>Mythenqaui</h4> <br>
+               <p>This lakeside open-air public swimming bath, with its non-swimmer 
+                 area and water fountains, is particularly suitable for children. </p>
                
                <br>
                <div class="card-link">
-               <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
+               <button class="linkBtn linkBtn-SM"><a href="./placesfood.html#mythenquai">Find ></a> </button> 
                </div>
            </div>    
            </div>
         </div>
- <!-- medium card saffa insel-->
+
+    <!-- 4 one md one rote fabrik-->
+          
+    <div class="card-photo-md card-photo swim apero">
+        <img class="photo-md" src="./images/roteFabrik_swim.png" />
+        <div class="photo-title captionapero"><h2>Rotefabrik</h2></div>
+        <div class="card-photo-overlay  overlayapero">
+          <div class="card-photo-caption captionmd captionapero">
+            <h4>Rotefabrik</h4>
+            <br />
+            <p>
+              Rotefabrik has it's options of what to do there, have an apero, watch
+              a concert or hop into the lake from one of their diving boards. It's a beautiful
+              view of the lake and a nice place to dive in if it's too hot for an apero.
+            </p>
+            <div class="card-icons">
+              <img class="smicon" src="./icons/aperoSM.svg" />
+              <img class="smicon" src="./icons/sunny.svg" />
+              <img class="smicon" src="./icons/peoplewatch.svg" />
+              <img class="smicon" src="./icons/far.svg" />
+            </div>
+            <br />
+            <div class="card-link">
+              <button class="linkBtn"> <a href="https://rotefabrik.ch/de/programm.html#/"target="_blank" >Learn More ></a></button>
+              <button class="linkBtn"> <a href="./placesfood.html#roteFabrik">Find ></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+   <!-- 5 small one-->
+   <div class="card-photo-sm card-photo apero">
+      <img class="photo-sm "  src="./images/rioBar-apero.png">  
+      <div class="photo-title captionapero"><h2>Rio Bar</h2></div>
+      <div class="card-photo-overlay overlaysm overlayapero">
+      <div class="card-photo-caption captionsm captionsapero"> 
+      <p>A unique garden bar right next to Zürich Main Station, surrounded by old trees, a river confluence, and a big intersection. 
+      </p> <br>
+      
+      <br>
+      <div class="card-link">
+      <button class="linkBtn linkBtn-SM"><a href="https://www.zuerich.com/en/visit/coffee-houses-tea-rooms/rio-bar-express-buffet" target="_blank">View More ></a> </button> 
+      <button class="linkBtn"> <a href="./placesfood.html#roteFabrik">Find ></a></button>
+    </div>
+  </div>    
+  </div>
+</div>
+<!--6 lg photo-->
+          
+<div class="card-photo-lg card-photo lounge" id="bgCard-position">
+    <img
+      class="photo-lg"
+      id="chinagarden-card" src="./images/beast-lounge.jpg"/>
+      <div class="photo-title captionlounge"><h2>The Beast</h2></div>
+    <div class="card-photo-overlay overlaylounge">
+      <div class="card-photo-caption captionlounge">
+        <h4>The Beast</h4>
+        <br />
+        <p>
+            At Stadionbrache you will find good vibes, it is a verein that has gardens, a stone brick oven, and a DIY skatebowl. 
+            Skateboard, grill, hang out, explore the gardens. A little oasis for skaters and freaks alike. Bring your friends to 
+            bake a pizza and hang in the garden or kick back and watch the skaters do their thing. It's a beauty.
+        </p>
+        <div class="card-icons">
+          <img class="smicon" src="icons/swimSM.svg" />
+          <img class="smicon" src="icons/sunny.svg" />
+          <img class="smicon" src="icons/peoplewatch.svg" />
+          <img class="smicon" src="icons/aperoSM.svg" />
+          <img class="smicon" src="icons/near.svg" />
+        </div>
+        <br />
+        <div class="card-link">
+          <button class="linkBtn"> <a href="https://sites.google.com/site/stadionbrachehardturm/"target="_blank">Learn More ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#beast">Find ></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--7 row of mediums letzibad-->
+<div class="card-photo-md card-photo lounge">
+    <img class="photo-md" src="./images/backi-lounge.jpg" />
+    <div class="photo-title captionlounge"><h2>Backerenlage</h2></div>
+    <div class="card-photo-overlay  overlaylounge">
+      <div class="card-photo-caption captionmd captionlounge">
+        <h4>Backerenlage</h4>
+        <br />
+        <p>
+            The "Bäckeranlage" park is one of the most beautiful green areas in the city of Zurich. 
+            Near langstrasse, it's a nice place to relax and everyone once in a while expereience open air concerts, it is a recreational paradise.
+        </p>
+        <div class="card-icons">
+          <img class="smicon" src="./icons/loungeSM.svg" />
+          <img class="smicon" src="./icons/shady.svg" />
+          <img class="smicon" src="./icons/peoplewatch.svg" />
+          <img class="smicon" src="./icons/near.svg" />
+        </div>
+        <br />
+        <div class="card-link">
+          <button class="linkBtn"><a href="https://www.facebook.com/baeckirestaurant" target="_blank" >Learn More ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#backi">Find ></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- 8 medium card saffa insel-->
  <div class="card-photo-md card-photo">
     <img class="photo-md" src="./images/saffaInsel_swim.png" />
     <div class="photo-title captionswim"><h2>Saffa Insel</h2></div>
@@ -146,37 +320,91 @@
         </div>
         <br />
         <div class="card-link">
-          <button class="linkBtn">Explore ></button>
-          <button class="linkBtn">Find ></button>
+          <button class="linkBtn"><a href="https://www.stadt-zuerich.ch/ted/de/index/gsz/natur-_und_erlebnisraeume/park-_und_gruenanlagen/landiwiese.html" target="_blank">Learn More ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#saffaInsel">Find ></a></button>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- small one-->
-  <div class="card-photo-sm card-photo ">
-      <img class="photo-sm " src="./images/Zürich_Arboretum_swim_lounge.jpeg">  
-      <div class="photo-title captionswim"><h2>Rentenwiese</h2></div>
+  <!-- 9 medium card apero-->
+ <div class="card-photo-md card-photo apero">
+    <img class="photo-md" src="./images/frischerfritz_apero.png" />
+    <div class="photo-title captionapero"><h2>Frischer Fritz</h2></div>
+    <div class="card-photo-overlay  overlayapero">
+      <div class="card-photo-caption captionmd captionapero">
+        <h4>Frischer Fritz</h4>
+        <br />
+        <p>
+            Relax at Fischers Fritz, directly on Lake Zurich, while tucking into some tasty “Fischchnusperli”. They have a
+            mix of it all: Restaurant, beach, camping, beach sports, shop and fishery.
+        </p>
+        <div class="card-icons">
+          <img class="smicon" src="./icons/aperoSM.svg" />
+          <img class="smicon" src="./icons/sunny.svg" />
+          <img class="smicon" src="./icons/peoplewatch.svg" />
+          <img class="smicon" src="./icons/far.svg" />
+        </div>
+        <br />
+        <div class="card-link">
+          <button class="linkBtn"><a href="https://www.fischers-fritz.ch/en/gallery/restaurant/" target="_blank">Learn More</a></button>
+          <button class="linkBtn"><a href="./placesfood.html#baker">Find ></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--10 medium-->
+  <div class="card-photo-md card-photo event">
+      <img class="photo-md" src="./images/fullMoon-event.png" />
+      <div class="photo-title captionevent"><h2></h2></div>
+      <div class="card-photo-overlay  overlayevent">
+        <div class="card-photo-caption captionmd captionevent">
+          <h4>Full Moon Party</h4>
+          <br />
+          <p>
+          Here at Ginetta we are cleebrating together the full moon becuase why not. 
+          We will enjoy drinks, our coworkers, and friends. 
+          </p>
+          <div class="card-icons">
+            <img class="smicon" src="./icons/swimSM.svg" />
+            <img class="smicon" src="./icons/sunny.svg" />
+            <img class="smicon" src="./icons/peoplewatch.svg" />
+            <img class="smicon" src="./icons/near.svg" />
+          </div>
+          <br />
+          <div class="card-link">
+            <button class="linkBtn"><a href="https://ginetta.net/" target="_blank">Learn More ></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#ginetta">Find ></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <!-- 11 small one-->
+  <div class="card-photo-sm card-photo swim lounge">
+      <img class="photo-sm" src="./images/letzibad_swim-ariel.png">  
+      <div class="photo-title captionswim"><h2>Letzibad</h2></div>
       <div class="card-photo-overlay overlaysm overlayswim">
       <div class="card-photo-caption captionsm captionswim"> 
-      <p>A popular spot to go lay in the sun and hide under some shade.
-        There is a little stony beach that gives easy access to slowly enter the lake.
-      </p> <br>
+      <p>Enjoy three different swimming pools one for divers, one for 
+        swimming laps, and another for the little ones. </p> 
       
       <br>
       <div class="card-link">
-      <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
-      </div>
+      <button class="linkBtn linkBtn-SM"><a href="https://www.stadt-zuerich.ch/ssd/de/index/sport/schwimmen/sommerbaeder/freibad_letzigraben.html"target="_blank">View More</a> </button> 
+      <button class="linkBtn"><a href="./placesfood.html#ginetta">Find ></a></button>
+    </div>
   </div>    
   </div>
 </div>
 
-<!--lg photo-->
+
+
+<!-- 12 lg photo-->
           
-            <div class="card-photo-lg card-photo ">
+            <div class="card-photo-lg card-photo swim" id="bgCard-position">
               <img
                 class="photo-lg"
-                id="oberer-card" src="./images/chinaGarten.jpg"/>
+                id="chinagarden-card" src="./images/chinaGarten.jpg"/>
                 <div class="photo-title captionswim"><h2>China Garden</h2></div>
               <div class="card-photo-overlay overlayswim">
                 <div class="card-photo-caption captionswim">
@@ -196,20 +424,37 @@
                   </div>
                   <br />
                   <div class="card-link">
-                    <button class="linkBtn">Explore ></button>
-                    <button class="linkBtn">Find ></button>
+                    <button class="linkBtn"><a href="https://www.zuerich.com/en/visit/attractions/chinese-garden" target="_blank">Learn More ></a></button>
+                    <button class="linkBtn"><a href="./placesfood.html#chinaGarden">Find ></a></button>
                   </div>
                 </div>
               </div>
             </div>
 
-            
-           
+  <!--row sm md lg-->          
+  <!-- 13 small one-->
+  <div class="card-photo-sm card-photo swim">
+      <img class="photo-sm "  src="./images/Zürich_Arboretum_swim_lounge.jpeg">  
+      <div class="photo-title captionswim"><h2>Rentenwiese</h2></div>
+      <div class="card-photo-overlay overlaysm overlayswim">
+      <div class="card-photo-caption captionsm captionswim"> 
+      <p>A popular spot to go lay in the sun and hide under some shade.
+        There is a little stony beach that gives easy access to slowly enter the lake.
+      </p> <br>
+      
+      <br>
+      <div class="card-link">
+      <button class="linkBtn linkBtn-SM"><a href="https://www.stadt-zuerich.ch/ted/de/index/gsz/natur-_und_erlebnisraeume/park-_und_gruenanlagen/arboretum.html"target="_blank">View More</a> </button> 
+      <button class="linkBtn"><a href="./placesfood.html#chinaGarden">Find ></a></button>
+    </div>
+  </div>    
+  </div>
+</div>         
          
         
 
-<!--row of mediums letzibad-->
-<div class="card-photo-md card-photo">
+<!--14 md-->
+<div class="card-photo-md card-photo swim">
     <img class="photo-md" src="./images/obererLetten_swim.png" />
     <div class="photo-title captionswim"><h2>Oberer Letten</h2></div>
     <div class="card-photo-overlay  overlayswim">
@@ -229,15 +474,116 @@
         </div>
         <br />
         <div class="card-link">
-          <button class="linkBtn">Explore ></button>
-          <button class="linkBtn">Find ></button>
+          <button class="linkBtn"><a href="https://www.zuerich.com/en/visit/sport/upper-letten-river-pool" target="_blank">Explore ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#obererLetten">Find ></a></button>
         </div>
       </div>
     </div>
   </div>
 
-  <!--medium-->
-  <div class="card-photo-md card-photo">
+  <!--15 lg-->
+  <div class="card-photo-lg card-photo apero">
+      <img class="photo-lg" src="./images/samigo_apero.jpg">
+      <div class="photo-title captionapero"><h2>Samigo</h2></div>
+      <div class="card-photo-overlay overlayapero">
+      <div class="card-photo-caption captionapero"> 
+      <h4>Samigo</h4> <br>
+      <p> Looking to fuel your senses and a place to enjoy a drink but with a spice. At Samigo you can expect a unique experience of drag-queens,fire-eaters, burlesque dancers and international food and drinks.  </p>
+      <div class="card-icons">
+       <!--<object type="image/svg+xml" data="images/sunny.svg" class="smicon"> </object> -->
+       <img class="smicon"src="./icons/aperoSM.svg">
+       <img class="smicon" src="./icons/sunny.svg">
+          <img class="smicon"src="./icons/peoplewatch.svg">
+          <img class="smicon"src="icons/near.svg">
+      </div>
+      <br>
+      <div class="card-link">
+      <button class="linkBtn"><a href="https://samigo.ch/" target="_blank">Explore ></a> </button>
+       <button class="linkBtn"><a href="./placesfood.html#samigo">Find ></a></button>
+  </div>
+  </div>    
+      </div>
+  </div>
+  
+
+    <!--row of lg md sm-->
+    <!--16 lg-->
+    <div class="card-photo-lg card-photo apero">
+        <img
+          class="photo-lg"
+          id="chinagarden-card" src="./images/forkBottle_apero.jpg"/>
+          <div class="photo-title captionapero"><h2>Fork & Bottle</h2></div>
+        <div class="card-photo-overlay overlayapero">
+          <div class="card-photo-caption captionapero">
+            <h4>Fork & Bottle</h4>
+            <br />
+            <p>
+                Known for being Zurich's only farm-to-table restaurant offering an ever-changing menu of craft beer, 
+                Fork & Bottle invites you in to enjoy great food and drink in a relaxed country setting.
+            </p>
+            <div class="card-icons">
+              <img class="smicon" src="icons/swimSM.svg" />
+              <img class="smicon" src="icons/sunny.svg" />
+              <img class="smicon" src="icons/peoplewatch.svg" />
+              <img class="smicon" src="icons/aperoSM.svg" />
+              <img class="smicon" src="icons/near.svg" />
+            </div>
+            <br />
+            <div class="card-link">
+              <button class="linkBtn"><a href="http://www.forkandbottle.ch/" target="_blank">Learn More ></a> </button>
+              <button class="linkBtn"><a href="./placesfood.html#forkBottle"Find ></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--17 ssm-->
+      <div class="card-photo-sm card-photo apero">
+          <img class="photo-sm "  src="./images/HafenEnge_kiosk-apero.png">  
+          <div class="photo-title captionapero"><h2>Hafen Enge Kiosk</h2></div>
+          <div class="card-photo-overlay overlaysm overlayapero">
+          <div class="card-photo-caption captionsm captionapero"> 
+          <p>A nice place at the lake to have a morning coffee with a view or
+            an evening apero.
+         
+          </p> <br>
+          
+          <br>
+          <div class="card-link">
+          <button class="linkBtn linkBtn-SM"><a href="http://hafen-enge-beiz.ch/?Page=K01" target="_blank">View More</a> </button> 
+          <button class="linkBtn"><a href="./placesfood.html#hafenEnge">Find ></a></button>
+        </div>
+      </div>    
+      </div>
+    </div>    
+      <!--18 medium-->
+      <div class="card-photo-md card-photo lounge">
+          <img class="photo-md" src="./images/SonenBerg-lounge.png" />
+          <div class="photo-title captionlounge"><h2>SonnenBerg</h2></div>
+          <div class="card-photo-overlay  overlaylounge">
+            <div class="card-photo-caption captionmd captionlounge">
+              <h4>Sonnenberg</h4>
+              <br />
+              <p>
+                  A nice place to go watch the sunset and escape the city. There is a restaurant too to have dinner or a drink.
+              </p>
+              <div class="card-icons">
+                <img class="smicon" src="./icons/loungeSM.svg" />
+                <img class="smicon" src="./icons/sunny.svg" />
+                <img class="smicon" src="./icons/secluded.svg" />
+                <img class="smicon" src="./icons/far.svg" />
+              </div>
+              <br />
+              <div class="card-link">
+                <button class="linkBtn"><a href="https://dersonnenberg.ch/en/home-2/" target="_blank">Learn More > </a></button>
+                <button class="linkBtn"> <a href="./placesfood.html#sonenberg">Find ></a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <!--19 mediuem swim-->
+  <div class="card-photo-md card-photo swim apero">
       <img class="photo-md" src="./images/untererletten_swim.png" />
       <div class="photo-title captionswim"><h2>Unterer Letten</h2></div>
       <div class="card-photo-overlay  overlayswim">
@@ -256,14 +602,14 @@
           </div>
           <br />
           <div class="card-link">
-            <button class="linkBtn">Explore ></button>
-            <button class="linkBtn">Find ></button>
+            <button class="linkBtn"><a href="https://www.zuerich.com/en/visit/sport/lower-letten-river-pool" target="_blank">See More ></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#untererLetten"></a>Find ></button>
           </div>
         </div>
       </div>
     </div>
-    <!--medium-->
-    <div class="card-photo-md card-photo">
+    <!--20 medium-->
+    <div class="card-photo-md card-photo swim">
         <img class="photo-md" src="./images/LettenBridge_rockIsland.png" />
         <div class="photo-title captionswim"><h2>Limmat Nook</h2></div>
         <div class="card-photo-overlay  overlayswim">
@@ -283,58 +629,86 @@
             </div>
             <br />
             <div class="card-link">
-              <button class="linkBtn">Explore ></button>
-              <button class="linkBtn">Find ></button>
+              <button class="linkBtn"><a href="https://www.instagram.com/explore/tags/limmatschwimmen/" target="_blank">Explore ></a></button>
+              <button class="linkBtn"><a href="./placesfood.html#nook1">Find ></a></button>
             </div>
           </div>
         </div>
       </div>
+  <!--21 medium limmat-->
+  <div class="card-photo-md card-photo swim">
+      <img class="photo-md" src="./images/LettenRocks_swim.png" />
+      <div class="photo-title captionswim"><h2>Limmat Rocks</h2></div>
+      <div class="card-photo-overlay  overlayswim">
+        <div class="card-photo-caption captionmd captionswim">
+          <h4>Limmat Nook before Werd Insel</h4>
+          <br />
+          <p>
+           If your floating down the Limmat or searching for somewhere to dip in.
+           This spot on the limmat is nice to rest and meditate on the rocks, or hop in
+           a little bit earlier and swim to the rocks. 
+          </p>
+          <div class="card-icons">
+            <img class="smicon" src="./icons/swimSM.svg" />
+            <img class="smicon" src="./icons/sunny.svg" />
+            <img class="smicon" src="./icons/secluded.svg" />
+            <img class="smicon" src="./icons/far.svg" />
+          </div>
+          <br />
+          <div class="card-link">
+            <button class="linkBtn"><a href="https://www.instagram.com/explore/tags/limmatschwimmen/" target="_blank">Explore ></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#nook2">Find ></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
 <!--row of med sm lg-->
-<!--medium-->
-<div class="card-photo-md card-photo">
-    <img class="photo-md" src="./images/LettenRocks_swim.png" />
-    <div class="photo-title captionswim"><h2>Limmat Rocks</h2></div>
-    <div class="card-photo-overlay  overlayswim">
-      <div class="card-photo-caption captionmd captionswim">
-        <h4>Limmat Nook before Werd Insel</h4>
+<!--22 medium-->
+<div class="card-photo-md card-photo lounge">
+    <img class="photo-md" src="./images/dolderForest-lounge.jpg" />
+    <div class="photo-title captionlounge"><h2>Dolder Forest Walk</h2></div>
+    <div class="card-photo-overlay  overlaylounge">
+      <div class="card-photo-caption captionmd captionlounge">
+        <h4>Dolder Forest Walk</h4>
         <br />
         <p>
-         If your floating down the Limmat or searching for somewhere to dip in.
-         This spot on the limmat is nice to rest and meditate on the rocks, or hop in
-         a little bit earlier and swim to the rocks. 
+            Take the tram to Dolder and walk in the forest late in the evening, 
+            best in winters, and enjoy a fondue at restaurant Degenried.
         </p>
         <div class="card-icons">
-          <img class="smicon" src="./icons/swimSM.svg" />
-          <img class="smicon" src="./icons/sunny.svg" />
+          <img class="smicon" src="./icons/loungeSM.svg" />
+          <img class="smicon" src="./icons/shady.svg" />
           <img class="smicon" src="./icons/secluded.svg" />
           <img class="smicon" src="./icons/far.svg" />
         </div>
         <br />
         <div class="card-link">
-          <button class="linkBtn">Explore ></button>
-          <button class="linkBtn">Find ></button>
+          <button class="linkBtn"><a href="http://www.adlisberg.ch/en/events-aktionen/wanderungen/" target="_blank">Explore ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#dolderTrail">Find ></a></button>
         </div>
       </div>
     </div>
   </div>
-  <!-- small one-->
-  <div class="card-photo-sm card-photo">
-      <img class="photo-sm" src="./images/letzibad_swim-ariel.png">  
-      <div class="photo-title captionswim"><h2>Letzibad</h2></div>
-      <div class="card-photo-overlay overlaysm overlayswim">
-      <div class="card-photo-caption captionsm captionswim"> 
-      <h4>Letzibad</h4> <br>
-      
-      <br>
-      <div class="card-link">
-      <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
-      </div>
-  </div>    
-  </div>
-</div>
+  <!-- 23 small one green leb-->
+  <div class="card-photo-sm card-photo apero">
 
-  <!--large one-->
-  <div class="card-photo-lg card-photo">
+      <img class="photo-sm "  src="./images/gruneLebanon-apero.png">  
+           <div class="photo-title captionapero"><h2>Grüne Lebanon</h2></div>
+           <div class="card-photo-overlay overlaysm overlayapero">
+           <div class="card-photo-caption captionsm captionapero"> 
+           <p> A decent price and real authentic and distinctive Lebanonese food. 
+             Near the main station a good place to go when looking for a good quick meal.
+           </p> <br>
+           
+           <br>
+           <div class="card-link">
+           <button class="linkBtn linkBtn-SM"><a href="https://www.almouchtar.com/">View More</a> </button> 
+           </div>
+       </div>    
+       </div>
+     </div>
+  <!--24 large one-->
+  <div class="card-photo-lg card-photo swim lounge">
       <img
         class="photo-lg"
         id="seeBad-card"
@@ -358,15 +732,57 @@
           </div>
           <br />
           <div class="card-link">
-            <button class="linkBtn">Explore ></button>
-            <button class="linkBtn">Find ></button>
+            <button class="linkBtn"><a href="https://www.stadt-zuerich.ch/ted/de/index/gsz/natur-_und_erlebnisraeume/park-_und_gruenanlagen/werdinsel.html"> Explore ></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#werdInsel">Find ></a></button>
           </div>
         </div>
       </div>
     </div>
+<!--row of sm md lg-->
+<!--25 sm-->
+<div class="card-photo-sm card-photo apero">
 
-<!--row of lg md sm-->
-<div class="card-photo-lg card-photo">
+    <img class="photo-sm "  src="./images/kokoro-aperofood.png">  
+         <div class="photo-title captionapero"><h2>Kokoro</h2></div>
+         <div class="card-photo-overlay overlaysm overlayapero">
+         <div class="card-photo-caption captionsm captionapero"> 
+         <p> My favorite Japanese restaurant. - Simon K
+         </p> <br>
+         
+         <br>
+         <div class="card-link">
+         <button class="linkBtn linkBtn-SM"><a href="https://www.kokoro-restaurant.ch/">View More</a> </button> 
+         <button class="linkBtn"><a href="./placesfood.html#kokoro">Find ></a></button>
+        </div>
+     </div>    
+     </div>
+   </div>
+   <!--26 med-->
+   <div class="card-photo-md card-photo apero">
+      <img class="photo-md" src="./images/the bite-eat.png" />
+      <div class="photo-title captionapero"><h2>The Bite</h2></div>
+      <div class="card-photo-overlay  overlayapero">
+        <div class="card-photo-caption captionmd captionapero">
+          <h4>The Bite</h4>
+          <br />
+          <p>
+              "Best burgers in town"
+          </p>
+          <div class="card-icons">
+            <img class="smicon" src="./icons/aperoSM.svg" />
+            <img class="smicon" src="./icons/peoplewatch.svg" />
+            <img class="smicon" src="./icons/near.svg" />
+          </div>
+          <br />
+          <div class="card-link">
+            <button class="linkBtn"> <a href="https://www.thebite.ch/">See More ></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#theBite">Find ></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--27 lg-->
+<div class="card-photo-lg card-photo swim ">
     <img
       class="photo-lg"
       id="seeBad-card"
@@ -391,15 +807,47 @@
         </div>
         <br />
         <div class="card-link">
-          <button class="linkBtn">Explore ></button>
-          <button class="linkBtn">Find ></button>
+          <button class="linkBtn"><a href="https://www.doldersports.com/en/summer-front-page-en/bad/" target="_blank">Explore ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#dolderBad">Find ></a></button>
         </div>
       </div>
     </div>
   </div>
 
-<!--medium-->
-<div class="card-photo-md card-photo">
+<!--row of lg md sm-->
+<!--28-->
+<div class="card-photo-lg card-photo lounge ">
+    <img
+      class="photo-lg"
+      id="seeBad-card"
+      src="./images/Lindenhof-lounge.png"
+    /> <div class="photo-title captionlounge"><h2>Lindenhof</h2></div>
+    <div class="card-photo-overlay overlaylounge">
+      <div class="card-photo-caption captionlounge">
+        <h4>Lindenhof</h4>
+        <br />
+        <p>
+            A nice place to get a good view of the old town. A good place for dates or to take visitors.
+            "‘Especially magical on a sunny Autumn day when you can walk across a carpet of crisp leaves 
+            under bright amber trees!’ - Louise
+        </p>
+        <div class="card-icons">
+          <img class="smicon" src="icons/loungeSM.svg" />
+          <img class="smicon" src="icons/shady.svg" />
+          <img class="smicon" src="icons/secluded.svg" />
+          <img class="smicon" src="icons/near.svg" />
+        </div>
+        <br />
+        <div class="card-link">
+          <button class="linkBtn"><a href="https://www.zuerich.com/en/visit/attractions/lindenhof"> Learn More ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#lindenhof">Find ></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--29 medium-->
+<div class="card-photo-md card-photo swim">
     <img class="photo-md" src="./images/Katzensee-swim.png" />
     <div class="photo-title captionswim"><h2>Katzensee</h2></div>
     <div class="card-photo-overlay  overlayswim">
@@ -420,14 +868,57 @@
         </div>
         <br />
         <div class="card-link">
-          <button class="linkBtn">Explore ></button>
-          <button class="linkBtn">Find ></button>
+          <button class="linkBtn"><a href="https://www.zuerich.com/en/visit/nature/katzensee-lake" target="_blank">Explore ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#katzensee">Find ></a></button>
         </div>
       </div>
     </div>
   </div>
-   <!-- small one-->
-   <div class="card-photo-sm card-photo">
+   <!--30 small one-->
+   <div class="card-photo-sm card-photo apero">
+      <img class="photo-sm" src="./images/henrici-apero.jpg">  
+      <div class="photo-title captionapero"><h2>Henrici</h2></div>
+      <div class="card-photo-overlay overlaysm overlayapero">
+      <div class="card-photo-caption captionsm captionapero"> 
+      <p>Drinking coffee is a true experience at Heinrici, where there is 
+        everything from classic coffees to creative coffee cocktails to choose from.</p> 
+      
+      <br>
+      <div class="card-link">
+      <button class="linkBtn linkBtn-SM"><a href="https://cafe-henrici.ch/">Explore ></a> </button>
+      <button class="linkBtn"><a href="./placesfood.html#henrici">Find ></a></button> 
+      </div>
+  </div>    
+  </div>
+</div>
+<!--31 md one-->
+<div class="card-photo-md card-photo lounge apero">
+    <img class="photo-md" src="./images/bullingerplatz.png" />
+    <div class="photo-title captionlounge"><h2>Bullingerplatz</h2></div>
+    <div class="card-photo-overlay  overlaylounge">
+      <div class="card-photo-caption captionmd captionlounge">
+        <h4>Bullingerplatz</h4>
+        <br />
+        <p>
+           A great spot nooked into the city and the neighborhood. Enjoy sitting around the fountain at Bullingerplatz.
+           Or at the Cafe Bonhuer
+        </p>
+        <div class="card-icons">
+          <img class="smicon" src="./icons/loungeSM.svg" />
+          <img class="smicon" src="./icons/shady.svg" />
+          <img class="smicon" src="./icons/secluded.svg" />
+          <img class="smicon" src="./icons/far.svg" />
+        </div>
+        <br />
+        <div class="card-link">
+          <button class="linkBtn"><a href="http://www.cafedubonheur.ch/" target="_blank">Explore ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#bullingerplatz">Find ></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--32 small one-->
+   <div class="card-photo-sm card-photo swim">
       <img class="photo-sm" src="./images/Bad Utoquai.png">  
       <div class="photo-title captionswim"><h2>Utoquai Bad</h2></div>
       <div class="card-photo-overlay overlaysm overlayswim">
@@ -436,11 +927,230 @@
       
       <br>
       <div class="card-link">
-      <button class="linkBtn linkBtn-SM"><a href="#seeBad-card">View More</a> </button> 
-      </div>
+      <button class="linkBtn linkBtn-SM"><a href="https://www.zuerich.com/en/visit/sport/utoquai-swimming-area" target="_blank">View More</a> </button> 
+      
+    </div>
   </div>    
   </div>
 </div>
+<!--33-->
+<div class="card-photo-lg card-photo apero ">
+    <img
+      class="photo-lg"
+      id="seeBad-card"
+      src="./images/RiminiBar-apero.png"
+    /> <div class="photo-title captionapero"><h2>Rimini Bar</h2></div>
+    <div class="card-photo-overlay overlayapero">
+      <div class="card-photo-caption captionapero">
+        <h4>Rimini Bar</h4>
+        <br />
+        <p>
+           Nested away along the Sihl you'll find Rimini Bar. And it's a great place to enjoy a cocktail and some refreshments.
+        </p>
+        <div class="card-icons">
+          <img class="smicon" src="icons/aperoSM.svg" />
+          <img class="smicon" src="icons/shady.svg" />
+          <img class="smicon" src="icons/peoplewatch.svg" />
+          <img class="smicon" src="icons/near.svg" />
+        </div>
+        <br />
+        <div class="card-link">
+          <button class="linkBtn"><a href="https://www.facebook.com/RiminiBar"> Learn More ></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#rimini">Find ></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--34 row of md-->
+  <div class="card-photo-md card-photo apero">
+      <img class="photo-md" src="./images/golosone-food.jpg" />
+      <div class="photo-title captionapero"><h2>Golosone</h2></div>
+      <div class="card-photo-overlay  overlayapero">
+        <div class="card-photo-caption captionmd captionapero">
+          <h4>Golosone</h4>
+          <br />
+          <p>
+              A nice italian restaurant in the city center. Tasty dishes and big portions makes it the perfect place to go with friends.
+              Great location and good food.
+          </p>
+          <div class="card-icons">
+            <img class="smicon" src="./icons/swimSM.svg" />
+            <img class="smicon" src="./icons/sunny.svg" />
+            <img class="smicon" src="./icons/peoplewatch.svg" />
+            <img class="smicon" src="./icons/near.svg" />
+          </div>
+          <br />
+          <div class="card-link">
+            <button class="linkBtn"><a href="https://www.golosone.ch/">Learn More ></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#golosone">Find ></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--35 medium-->
+    <div class="card-photo-md card-photo apero">
+        <img class="photo-md" src="./images/kinoXenix-apero.png" />
+        <div class="photo-title captionapero"><h2>Kino Xenix</h2></div>
+        <div class="card-photo-overlay  overlayapero">
+          <div class="card-photo-caption captionmd captionapero">
+            <h4>Kino Xenix</h4>
+            <br />
+            <p>
+                A nice place to go for a drink and to hangout with friends, there is also a park and sometimes live music. 
+                And if it's a rainy day it's also the place to go to watch an art-house movie. 
+            </p>
+            <div class="card-icons">
+              <img class="smicon" src="./icons/swimSM.svg" />
+              <img class="smicon" src="./icons/shady.svg" />
+              <img class="smicon" src="./icons/peoplewatch.svg" />
+              <img class="smicon" src="./icons/near.svg" />
+            </div>
+            <br />
+            <div class="card-link">
+              <button class="linkBtn"><a href="https://www.xenix.ch/">View More ></a></button>
+              <button class="linkBtn"><a href="./placesfood.html#kinoXenix">Find ></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!--36 medium-->
+  <div class="card-photo-md card-photo lounge">
+      <img class="photo-md" src="./images/panoramaweg-lounge.png" />
+      <div class="photo-title captionlounge"><h2>Panoramaweg</h2></div>
+      <div class="card-photo-overlay  overlaylounge">
+        <div class="card-photo-caption captionmd captionlounge">
+          <h4>Panoramaweg</h4>
+          <br />
+          <p>
+          The perfect place to get the top views of Zurich a nice trail that is just the hike you need on an evening. 
+          Enjoy a picinic at the top, or escpae the cloudy evening in spring and fall and get above the clouds.
+          </p>
+          <div class="card-icons">
+            <img class="smicon" src="./icons/lounge.svg" />
+            <img class="smicon" src="./icons/sunny.svg" />
+            <img class="smicon" src="./icons/secluded.svg" />
+            <img class="smicon" src="./icons/far.svg" />
+          </div>
+          <br />
+          <div class="card-link">
+            <button class="linkBtn"><a href="https://www.bergwelten.com/t/w/19582">Learn More></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#panorama">Find ></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--37 medium-->
+    <div class="card-photo-md card-photo event">
+        <img class="photo-md" src="./images/rundfunk-event.png" />
+        
+        <div class="card-photo-overlay  overlayevent">
+          <div class="card-photo-caption captionmd captionevent">
+            <h4>Rundfunk </h4>
+            <br />
+            <p>
+            Hosted by the radio station Rundfunk.fm they are celebrating music and having live sessions through out the day at
+            Landesmuseum. Enjoy food trucks, drinks, and live music.
+            <h5> <em>From Jul 25 - Sept 6 </em></h5>
+            </p>
+            <br>
+            <div class="card-icons">
+              <img class="smicon" src="./icons/eventSM.svg" />
+              <img class="smicon" src="./icons/sunny.svg" />
+              <img class="smicon" src="./icons/secluded.svg" />
+              <img class="smicon" src="./icons/far.svg" />
+            </div>
+            <br />
+            <div class="card-link">
+              <button class="linkBtn"><a href="rundfunk.fm">Learn More></a></button>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+  <!--38 medium-->
+  <div class="card-photo-md card-photo apero">
+      <img class="photo-md" src="./images/Barranco.png" />
+      <div class="photo-title captionapero"><h2>Barranco</h2></div>
+      <div class="card-photo-overlay  overlayapero">
+        <div class="card-photo-caption captionmd captionapero">
+          <h4>Barranco</h4>
+          <br />
+          <p>
+              Barranco is a Peruvian restaurant and pisco bar, inspired by the bold 
+              flavors of Lima and the street-food scene in its famous artists’ district Barranco.
+          </p>
+          <br>
+          <div class="card-icons">
+            <img class="smicon" src="./icons/eventSM.svg" />
+            <img class="smicon" src="./icons/sunny.svg" />
+            <img class="smicon" src="./icons/secluded.svg" />
+            <img class="smicon" src="./icons/near.svg" />
+          </div>
+          <br />
+          <div class="card-link">
+            <button class="linkBtn"><a href="https://www.barranco.ch/">Learn More></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#barranco">Find ></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--39 medium-->
+<div class="card-photo-md card-photo apero">
+    <img class="photo-md" src="./images/Freya-apero.png" />
+    <div class="photo-title captionapero"><h2>Freya</h2></div>
+    <div class="card-photo-overlay  overlayapero">
+      <div class="card-photo-caption captionmd captionapero">
+        <h4>Freya</h4>
+        <br />
+        <p>
+            Come for an aperitif or stay for dinner!
+            Enjoy your evening at FREYA with homemade mezze specialties and 
+            treat yourself to a nice glass of wine. - Or do you want to sip cocktails 
+            and vegetarian delicacies through a balmy summer evening?
+        </p>
+        <br>
+        <div class="card-icons">
+          <img class="smicon" src="./icons/aperoSM.svg" />
+          <img class="smicon" src="./icons/sunny.svg" />
+          <img class="smicon" src="./icons/secluded.svg" />
+          <img class="smicon" src="./icons/near.svg" />
+        </div>
+        <br />
+        <div class="card-link">
+          <button class="linkBtn"><a href="https://www.freya-restaurant.ch/">Learn More></a></button>
+          <button class="linkBtn"><a href="./placesfood.html#freya">Find ></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-photo-md card-photo event">
+      <img class="photo-md" src="./images/dynamo.png" />
+      <div class="photo-title captionevent"><h2>UX Meetups</h2></div>
+      <div class="card-photo-overlay  overlayevent">
+        <div class="card-photo-caption captionmd captionevent">
+          <h4>UX Meetups</h4>
+          <br />
+          <p>
+              Join our meetup group UX Wizards and meet with us at the UX happy hour 
+              every first Wednesday of the month. It's informal and open to anyone. 
+              Developers, designers, UX researchers, PMs or founders – are all welcome! 
+              No talks or workshops, just us hanging out.
+          </p>
+          <br>
+          <div class="card-icons">
+            <img class="smicon" src="./icons/aperoSM.svg" />
+            <img class="smicon" src="./icons/eventSM.svg" />
+            <img class="smicon" src="./icons/peoplewatch.svg" />
+            <img class="smicon" src="./icons/near.svg" />
+          </div>
+          <br />
+          <div class="card-link">
+            <button class="linkBtn"><a href="https://www.freya-restaurant.ch/">Learn More></a></button>
+            <button class="linkBtn"><a href="./placesfood.html#freya">Find ></a></button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 </div>
 
@@ -454,17 +1164,26 @@
 </div>
       </div>
     </section>
+
+
+
     <section class="Map-section">
         <div class="explore-section-title"></div>
-        <div class="explore-map">
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=18ENTgVgCklp31LEZ8c6rEGJtpU9ZRALU" width="640" height="480"></iframe>
-            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Seebad%20Enge&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-          </div>
+        <div id='map' style='width: 100vw; height: 600px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibHVjaWFtYXBzIiwiYSI6ImNqeWU3NjViMDB6bnEzY28zanptM2o1MWsifQ.O8VkURAOTdEkTk7b1Y38iQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/luciamaps/cjyh8o2ac06a21cpric0nf15x'
+});
+</script>
+       
 
     </section>
 
     
   </body>
+  <script src="filter.js"></script>
   <script src="index.js"></script>
   <script src="formSunnySpot.js"></script>
   <script src="scroll_items.js"></script>

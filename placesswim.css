@@ -1,40 +1,190 @@
-.banner-style {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #d2f4fa;
-  color: #17308f;
-  width: 100vw;
+.banner-photo-header {
+  background: url('./images/summerSpot-zurich.jpg');
+
+  background-color: rgba(252, 244, 213, 0.6);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   height: 400px;
+  position: relative;
 }
-.photo-scroll {
+.banner-text {
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
+  padding: 40px;
+}
+.banner-text h4 {
+  margin-top: 50px;
+}
+.mainCTA {
+  margin-top: 10px;
+}
+.CTA {
+  min-width: 180px;
+}
+
+.filter-container {
+  /*position: absolute;
+  top: 30%;
+  left: calc((100vw - 1216px) / 8);*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-left: 40px;
   margin-right: 40px;
 }
-.photo-scroll-container {
-  margin-top: 60px;
+.section-box {
+  width: 260px;
+  height: 150px;
+  padding: 20px;
+  text-align: center;
+}
+
+.swim-box {
+  background: #d2f4fa;
+}
+.swim-box:hover {
+  background: #a9edf9;
+}
+.swimBTN:hover {
+  background: #a9edf9;
+}
+
+.btnActive {
+  outline: none;
+  box-shadow: inset 0px 1px 2px rgba(240, 237, 237, 0.5) !important;
+}
+
+.lounge-box {
+  background: #c0eee7;
+}
+.lounge-box:hover {
+  background: #94e9dd;
+}
+.loungeBTN:hover {
+  background: #94e9dd;
+}
+.apero-box {
+  background: #fcf4d5;
+}
+.apero-box:hover {
+  background: #f7e8ad;
+}
+.aperoBTN:hover {
+  background: #f7e8ad;
+}
+
+.event-box {
+  background: #e7e0ef;
+}
+.event-box:hover {
+  background: #c9bfd9;
+}
+.eventBtn:hover {
+  background: #c9bfd9;
+}
+
+.icon-shrink {
+  width: 80px;
+}
+.swimBtn {
+  background: #d2f4fa;
+  border: none;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25);
+}
+.loungeBtn {
+  background: #c0eee7;
+  border: none;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25);
+}
+.aperoBtn {
+  background: #fcf4d5;
+  border: none;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.eventBtn {
+  background: #e7e0ef;
+  border: none;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+.keySection {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.keyCenter {
+  display: flex;
+  justify-content: center;
+}
+.sunny {
+  padding-right: 10px;
+  text-align: center;
+}
+.shady {
+  padding-right: 10px;
+  text-align: center;
+}
+.crowded {
+  padding-right: 10px;
+  text-align: center;
+}
+.secluded {
+  padding-right: 10px;
+  text-align: center;
+}
+.near {
+  padding-right: 10px;
+  text-align: center;
+}
+.far {
+  padding-right: 10px;
+  text-align: center;
+}
+.smallKey {
+  background: ;
+  border: 2px solid #e7e9e9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.photo-scroll {
   margin-left: 20px;
   margin-right: 20px;
+}
+.photo-scroll-container {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: space-between;
   align-items: flex-start;
+  position: relative;
 }
 
+#smCard-flexend {
+  align-self: center;
+}
 .card-photo-md {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: px;
+  margin-right: px;
   margin-top: 40px;
 }
 .card-photo-lg {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: px;
+  margin-right: px;
   margin-top: 40px;
 }
 .card-photo-sm {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: px;
+  margin-right: px;
   margin-top: 40px;
 }
 
@@ -74,4 +224,20 @@
   transform: none;
   visibility: visible;
   opacity: 1;
+}
+/* filter test */
+.hide {
+  display: none;
+}
+.bodylounge {
+  background: #c0eee7;
+}
+.bodyswim {
+  background: #d2f4fa;
+}
+.bodyapero {
+  background: #fcf4d5;
+}
+.bodyevent {
+  background: #e7e0ef;
 }

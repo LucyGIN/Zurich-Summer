@@ -8,10 +8,155 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <link rel="stylesheet" type="text/css" href="startpage.css" />
-    <title>LOUNGE ZH</title>
+    <link rel="stylesheet" type="text/css" href="share.css" />
+    <title>SHARE</title>
   </head>
   <body>
-    <h1>THIS IS WHERE THE LOUNGE SPOT WILL GO</h1>
+      <div class="hidden navlist">
+          <ul>
+            <!--<li class="home"><a href="startpage.html" id="navA">HOME</a></li>-->
+            <li class="swim"><a href="placeswim.html" id="navA">HOME</a></li>
+            <li class="lounge"><a href="placeslounge.html" id="navA">SHARE</a></li>
+            <li class="food"><a href="placesfood.html" id="navA">MAP</a></li>
+            <li class="styleGuide"><a href="stylesite.html" id="navA">STYLE</a>
+            </li>
+          </ul>
+        </div>
+        <nav class="navigationBar">
+          <button class="navbutton">
+            <img class="menuIcon" src="./icons/outline-menu-24px.svg" />
+          </button>
+          <img class="logo" src="images/smallLogo.svg" width="40px" />
+        </nav>
+    <!--banner-->
+      <section class="banner-photo-header">
+          <div class="banner-text">
+            <div><h4>Ginetta's Favorite summer spots</h4> </div>
+          </br>
+            <div><h1>share yours</h1> </div>
+            <div class="mainCTA">
+            </div>
+          </div>
+        </section>
+        <section class="submission-form">
+            <div class="simpleForm-container">
+                <div class="simpleForm-title"><h2>Submit your favorite spot</h2></div>
+            <div class="form-center">
+              <form action="javascript:alert('We are prcoessing your photo')"; method="post">
+                <div class="form-container">
+                    <div class="simpleForm-question "> <h4>Name of Location:</h4></div> <br>
+                <input class="simpleForm form-text" type="text" name="locationname" placeholder="Name of Location">
+                     <br>
+                    <div class="simpleForm-question"> <h4>Select Type of Location:</h4></div> <br>
+                  <div class="form-answer-container">
+                    <div class="form-left">
+
+                      <!--check somthing-->
+                      <div class="simpleForm share-form"> 
+                          <input type="checkbox" id="swimming" name="scales">
+                          <label for="swimming"><img class="input-icon" src="icons/swimSM.svg">
+                            swimming!</label>
+                        </div>
+
+                     <div class= "simpleForm share-form">   
+                      <input type="checkbox" name="categoryApero">   
+                      <label for="apero"> <img class="input-icon" src="icons/aperoSM.svg"> an apero, to eat, or coffee  
+                      </label>
+                    </div> 
+                     </div>
+
+
+                    <div class="form-right">
+                        <div class="simpleForm share-form">
+                     <input type="checkbox" name="categoryLounge">
+                     <label for="lounge">
+                        <img class="input-icon" src="icons/loungeSM.svg"> a lounge in the park, or hike  
+                       </label>
+                      </div>
+                      <div class="simpleForm share-form">
+                      <input type="checkbox" name="categoryEvent">
+                       <label for="event">
+                          <img class="input-icon" src="icons/eventSM.svg"> an event!  
+                         </label>
+                      </div>   
+                    </div>
+                  </div>
+               <br>
+                <!--characteristics-->
+                <div class="simpleForm-question"> <h4>Select Location characteristics:</h4></div> <br>
+                <div class="form-answer-container">
+                    <div class="form-left">
+
+                        <div class="simpleForm share-form"> 
+                            <input type="checkbox" id="sunny" name="scales">
+                            <label for="sunny"><img class="input-icon" src="icons/sunny.svg">
+                              sunny spots</label>
+                          </div>
+                      
+                     
+                      <div class="simpleForm share-form"> 
+                        <input type="checkbox" name="category">
+                        <label for="crowded">
+                         <img class="input-icon" src="icons/peoplewatch.svg"> perfect for people watching  
+                       </label>
+                       </div>
+
+                      <div class="simpleForm share-form">
+                       <input type="checkbox" name="category">
+                      <label for="near">
+                          <img class="input-icon" src="icons/near.svg"> in the city  
+                       </label>
+                      </div>
+                     </div>
+
+               <div class="form-right">
+                   <div class="simpleForm share-form">
+                      <input type="checkbox" name="category">
+                        <label for="shady">
+                        <img class="input-icon" src="icons/shady.svg"> has some shady spots  
+                       </label>
+                   </div>
+                   <div class="simpleForm share-form">
+                      <input type="checkbox" name="category">
+                       <label for="secluded"> <img class="input-icon" src="icons/secluded.svg"> more secluded  
+                         </label>
+                   </div>
+                   <div class="simpleForm share-form">
+                      <input type="checkbox" name="category">
+                        <label>
+                            <img class="input-icon" src="icons/far.svg"> a bit out of the city 
+                        </label>
+                  </div>
+                    </div>
+                  </div>
+               <br>
+                <div class="simpleForm-question"> <h4>Submit Photo:</h4></div> <br>
+                <div class="form-answer-container">
+                    <div class="form-left">
+                      <label class="simplePhoto">
+                       
+                       <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                        </label>
+                        </div>
+                   </div>
+                   <div ><button class="btn secondBtn uploadbtn">Upload</button> </div> 
+              <br>
+              <div class="simpleForm-question"> <h4>Photo Description:</h4></div> <br>
+              <div class="form-answer-container">
+                  <div class="form-left">
+                      <input class="simpleForm form-lg form-text" type="text" name="locationdescription" placeholder="Description of your location" required minlength="10" maxlength="180">
+                   
+              
+             <!--button-->
+             <div class="simpleForm-question">
+             <button class="btn1 mainBtn"> Submit </button> </div>
+            </div>
+          </form>
+          </div>
+        </section>
   </body>
+  <script src="filter.js"></script>
+  <script src="index.js"></script>
+  <script src="formSunnySpot.js"></script>
+  <script src="scroll_items.js"></script>
 </html>

@@ -2,12 +2,12 @@
   'use strict';
 
   // define variables
-  var items = document.querySelectorAll('.card-photo');
+  const items = document.querySelectorAll('.card-photo');
 
   // check if an element is in viewport
   // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
   function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
+    const rect = el.getBoundingClientRect();
     return (
       rect.top - 150 >= 0 &&
       rect.left >= 0 &&
@@ -18,8 +18,10 @@
   }
 
   function callbackFunc() {
-    for (var i = 0; i < items.length; i++) {
-      if (isElementInViewport(items[i])) {
+    for (let i = 0; i < items.length; i++) {
+      if (i <= 2) {
+        items[i].classList.add('in-view');
+      } else if (isElementInViewport(items[i])) {
         items[i].classList.add('in-view');
       }
     }
@@ -30,3 +32,10 @@
   window.addEventListener('resize', callbackFunc);
   window.addEventListener('scroll', callbackFunc);
 })();
+
+//trying to add nav background
+window.onscroll = () => {
+  const navigationBar = document.querySelector('nav');
+  if (this.scrollY <= 10) navigationBar.className = '';
+  else navigationBar.className = 'scroll';
+};
