@@ -156,6 +156,9 @@
 .photo-scroll {
   margin-left: 20px;
   margin-right: 20px;
+  max-width: 1450px;
+  display: flex;
+  justify-content: center;
 }
 .photo-scroll-container {
   margin-top: 20px;
